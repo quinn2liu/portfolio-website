@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons';
 import Link from 'next/link';
 
 export const Navigation = () => (
-  <div className="mb-3 flex items-center text-black font-semibold">
+  <div className="mb-3 flex items-center text-gray-950 sm:font-semibold">
     <Link href="/experiences" className="bg-emerald-400 p-2">EXPERIENCES</Link>
     {' '}
     <Link href="/projects" className="bg-blue-400 p-2">PROJECTS</Link>
@@ -41,7 +41,6 @@ export const BackHome = () => (
   </div>
 );
 
-
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -61,6 +60,11 @@ export default function Home() {
       <div className="mb-3.5">CS @ UPenn '25</div>
       <Links />
       <Navigation />
+      <div>
+        <button onClick={() => setTheme(theme == "dark" ? "light" : "dark")}>
+          {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
+        </button>
+      </div>
     </div>
   );
 }
