@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: {children: ReactNode}) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${fira.className} h-full font-medium bg-amber-200 text-gray-950 dark:bg-gray-950 dark:text-amber-200 sm:text-base text-xs`}>
+      <body className={`${fira.className} h-full font-medium bg-amber-100 text-gray-800 dark:bg-gray-800 dark:text-amber-100 sm:text-base text-xs`}>
         <Theme>{children}</Theme>
       </body>
     </html>

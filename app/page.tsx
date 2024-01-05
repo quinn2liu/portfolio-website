@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { FaGithub, FaInstagram, FaLinkedin, FaSpotify } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import Link from 'next/link';
 
@@ -30,6 +30,9 @@ const Links = () => (
           </a>
           <a href="https://open.spotify.com/user/g7x1ihgj3kf253a6lujcu1r30?si=e76e03b2532d4966" target="_blank" rel="noopener noreferrer">
             <FaSpotify />
+          </a>
+          <a href="mailto:quinn2liu@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
           </a>
         </IconContext.Provider>
       </div>
