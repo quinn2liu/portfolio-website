@@ -1,5 +1,6 @@
 import { Navigation, BackHome } from "../page";
 import { Inter } from 'next/font/google';
+import { FaStrava } from "react-icons/fa";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,19 +28,25 @@ const AboutInfoBlock = ({image, content, imageLeft}: {image: String, content: Re
 //detailing my commitments and hobbies
 const AboutCommunitiesHobbies = ({image, content}: {image: String, content: React.ReactElement}) => {
     return (
-        <div className="mb-24 pt-6 flex flex-col sm:flex-row sm:items-start items-center sm:space-x-6">
-            <p className="mb-12 flex-grow sm:max-w-xl max-w-sm">{image}</p>
-            <p className= {`${inter.className} flex-grow max-w-sm sm:text-xl text-lg`} >{content}</p>
+        <div>
+            <div className="mb-12 border-4 p-3 border-rose-300 bg-rose-300">
+                <p className="text-xl text-gray-800 font-bold">How I keep myself busy outside of work...</p>
+            </div>
+            <div className="mb-24 pt-6 flex flex-col sm:flex-row items-center sm:space-x-6">
+                <p className="mb-12 flex-grow sm:max-w-xl max-w-sm">{image}</p>
+                <p className= {`${inter.className} flex-grow max-w-lg sm:text-lg text-md font-normal`} >{content}</p>
+            </div>
         </div>
+        
     )
 }
 
 //main about page layout
 export default function About() {
   return (
-    <div className="h-full container mx-auto max-w-screen-lg px-6">
+    <div className="h-full container mx-auto max-w-screen-lg px-6 ">
         <div className="pt-12 flex flex-col justify-start items-start">
-            <div className="mb-4 text-3xl sm:text-7xl"> ABOUT ME </div>
+            <div className="mb-4 text-3xl sm:text-7xl"> ABOUT ME📔</div>
             <Navigation />
             <BackHome />
         </div>
@@ -58,14 +65,29 @@ export default function About() {
             <AboutCommunitiesHobbies image={'IMAGE IMAGE IMAGE'} 
             content= {
                 <>
-                    {/* <strong>When I'm not coding, you can find me...</strong>
-                    <ul>
-                        <li>Playing the piano (I've been playing for 13 years!)</li>
-                        <li>Playing video games (I'm a big fan of the <a href="https://www.halowaypoint.com/en-us" target="_blank" rel="noopener noreferrer">Halo</a> and <a href="https://www.nintendo.com/games/detail/super-smash-bros-ultimate-switch/" target="_blank" rel="noopener noreferrer">Super Smash Bros.</a> franchises)</li>
-                        <li>Watching movies (I'm a big fan of the <a href="https://www.imdb.com/title/tt4154796/" target="_blank" rel="noopener noreferrer">Marvel Cinematic Universe</a> and <a href="https://www.imdb.com/title/tt0120737/" target="_blank" rel="noopener noreferrer">The Lord of the Rings</a> trilogy)</li>
-                        <li>Listening to music (I'm a big fan of <a href="https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V?si=7f1d7c6c2b4b4a8d" target="_blank" rel="noopener noreferrer">Ed Sheeran</a> and <a href="https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V?si=7f1d7c6c2b4b4a8d" target="_blank" rel="noopener noreferrer">Coldplay</a>)</li>
-                        <li>Playing tennis (I'm a big fan of <a href="https://www.atptour.com/en/players/roger-federer/f324/overview" target="_blank" rel="noopener noreferrer">Roger Federer</a>)</li>
-                    </ul> */}
+                    <ul className="space-y-10">
+                        <li>⚒️ <strong>President</strong> of <a href="https://upennthetatau.com/" target="_blank" rel="noopener noreferrer"><strong><u>Theta Tau</u></strong></a>, UPenn's co-ed preprofessional engineering fraternity.</li>
+
+                        <li>🤸‍♂️ (Retired) <strong>Head Counselor</strong> for <a href="necysc.org"><strong><u>New Englanc Chinese Youth Summer Camp</u></strong></a> (NECYSC), a volunteer and student-run summer camp serving K-12 Chinese-American youth in the New England area.</li>
+
+                        <li>⚽ <strong>Playing and watching soccer.</strong> Born to be a 6, forced to be a fullback. Proud and delusional Tottenham Hotspur fan (#COYS).</li>
+
+                        <li>🏃‍♂️ <strong>Running.</strong> Went on a hero's journey from hating cardio to now training for a half marathon. <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"><strong><u>Follow me on Strava!!!<FaStrava /></u></strong></a></li>
+                        
+                        <li> 
+                        <p className="mb-4"><strong>🎧 Listening to music.</strong> I know it's cliché but I genuinely like listening to most genres of music. I'm also a for-fun DJ. Here's my all time favorites playlist (currently ordered up to song 82).</p>
+                        <iframe
+                            style={{borderRadius: '12px'}} 
+                            src="https://open.spotify.com/embed/playlist/2ey5NmzgIlZsepWGRZf3fS?utm_source=generator" 
+                            width="100%" 
+                            height="152" 
+                            allowFullScreen 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"
+                        ></iframe>
+                        </li>
+                        <li>🎮 <strong>Video Games.</strong> Always downt to play some Smash, Mario Kart, Valorant, or anything else.</li>
+                    </ul>
                 </>
             }/>
         </div>

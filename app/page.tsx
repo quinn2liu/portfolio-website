@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <div className="h-full container mx-auto max-w-screen-lg px-6 flex flex-col justify-center items-start">
-      <div className="mb-4 text-3xl sm:text-7xl"> QUINN LIU </div>
+      <div className="mb-3 text-3xl sm:text-7xl"> QUINN LIU </div>
       <div className="mb-2">Software Developer + Designer | Boston + Philadelhpia</div>
       <div className="mb-3.5">CS @ UPenn '25</div>
       <Links />
