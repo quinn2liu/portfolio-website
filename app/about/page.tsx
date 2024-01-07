@@ -38,8 +38,8 @@ const AboutInfoBlock = ({images, content, imageLeft}: {images: string[], content
 const AboutCommunitiesHobbies = ({content}: {content: React.ReactElement}) => {
     return (
         <div>
-            <div className="mb-8 border-4 p-3 dark:border-rose-900 dark:bg-rose-900 border-rose-300 bg-rose-300">
-                <p className="sm:text-xl text-md font-semi">How I keep myself busy outside of work...</p>
+            <div className="sm:mb-8 mb-6 border-4 p-4 dark:border-rose-900 dark:bg-rose-900 border-rose-300 bg-rose-300">
+                <p className="sm:text-2xl text-xl font-semi">How I keep myself busy outside of work...</p>
             </div>
             <div className="mb-12 pt-6 flex flex-col sm:flex-row items-center sm:space-x-8">
                 <div className="flex flex-col space-y-6 flex-grow sm:max-w-md max-w-sm sm:mb-0 mb-8">
@@ -47,7 +47,7 @@ const AboutCommunitiesHobbies = ({content}: {content: React.ReactElement}) => {
                     <img src='/images/homiess.JPG' alt="" className="hidden sm:block transition ease-in-out hover:-translate-y-1 hover:scale-105"/>
                     <img src='/images/bike.jpeg' alt="" className="hidden sm:block transition ease-in-out hover:-translate-y-1 hover:scale-105"/>
                 </div>
-                <p className= {`${inter.className} flex-grow max-w-2xl sm:text-lg text-md font-normal`}>{content}</p>
+                <p className= {`${inter.className} flex-grow max-w-2xl sm:text-xl text-lg font-normal`}>{content}</p>
             </div>
         </div>
         
@@ -57,7 +57,7 @@ const AboutCommunitiesHobbies = ({content}: {content: React.ReactElement}) => {
 //main about page layout
 export default function About() {
   return (
-    <div className="h-full container mx-auto max-w-screen-lg sm:px-0 px-6" suppressHydrationWarning>
+    <div className="h-full container mx-auto max-w-screen-lg sm:px-8 px-6" suppressHydrationWarning>
         <div className="sm:pt-16 pt-10 flex flex-col justify-start items-start">
             <div className="mb-4 text-3xl sm:text-7xl"> ABOUT ME📔</div>
             <Navigation />
@@ -77,7 +77,7 @@ export default function About() {
                 } imageLeft={false}/>
         <AboutCommunitiesHobbies
         content= {
-            <p>
+            <>
                 <ul className="space-y-8">
                     <li>⚒️ <strong>President</strong> of <a href="https://upennthetatau.com/" target="_blank" rel="noopener noreferrer"><strong><u>Theta Tau</u></strong></a>, UPenn's co-ed preprofessional engineering fraternity.</li>
 
@@ -85,7 +85,7 @@ export default function About() {
 
                     <li>⚽ <strong>Playing and watching soccer.</strong> Born to be a 6, forced to be a fullback. Proud and delusional Tottenham Hotspur fan (#COYS).</li>
 
-                    <li>🏃‍♂️ <strong>Running.</strong> Went on a hero's journey from hating cardio to now training for a half marathon. <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"><strong><u>Follow me on Strava!!!<FaStrava /></u></strong></a></li>
+                    <li>🏃‍♂️ <strong>Running.</strong> Went on a hero's journey from hating cardio to now training for a half marathon. <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"><strong><u>Follow my Strava!!!<FaStrava /></u></strong></a></li>
                     
                     <li> 
                         <p className="mb-6"><strong>🎧 Listening to music.</strong> It's cliché but I like listening to most genres of music. I'm also a for-fun DJ. Here's my all time favorites playlist (currently ordered up to #82).</p>
@@ -101,7 +101,7 @@ export default function About() {
                     </li>
                     <li>🎮 <strong>Video Games.</strong> Always down to play some Super Smash Bros, Mario Kart, Valorant, or anything else.</li>
                 </ul>
-            </p>
+            </>
         }/>
         <Footer />
     </div>
