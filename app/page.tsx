@@ -39,7 +39,7 @@ const Links = () => (
 );
 
 export const BackHome = () => (
-  <div className="mb-2">
+  <div className="mb-4">
     <Link href="/"> {'<- HOME'}</Link>
   </div>
 );

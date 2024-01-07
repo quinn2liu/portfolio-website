@@ -10,10 +10,21 @@
     transition: width 0.5s ease;
 }
 
-
-.tile:hover {
-    width: 100vmin;
+@media screen and (max-width: 648px) {
+    .tile {
+        width: 30vmin;
+    }
+    .tile:hover {
+        width: 120vmin;
+    }
 }
+
+@media screen and (min-width: 649px) {
+    .tile:hover {
+        width: 150vmin;
+    }
+}
+
 
 
 .tile > img {
