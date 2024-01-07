@@ -1,0 +1,29 @@
+.tile {
+    display: grid;
+    place-items: left;
+    width: 30vmin;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    margin: 0 0.5vmin;
+    transition: width 0.5s ease;
+}
+
+
+.tile:hover {
+    width: 100vmin;
+}
+
+
+.tile > img {
+    height: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+}
+
+
+  

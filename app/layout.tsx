@@ -16,6 +16,7 @@ export default function RootLayout({ children }: {children: ReactNode}) {
     <html lang="en" className="h-full">
       <body className={`${fira.className} h-full font-medium bg-amber-100 text-gray-800 dark:bg-gray-800 dark:text-amber-100 sm:text-base text-xs`}>
         <Theme>{children}</Theme>
+        {/* add a footer component here? */}
       </body>
     </html>
   );

@@ -44,6 +44,12 @@ export const BackHome = () => (
   </div>
 );
 
+export const Footer = () => (
+  <div className="sm:pb-8 pb-6 flex flex-col justify-center items-center">
+    Made with 🗿 by Quinn Liu (Last Update: {new Date().toLocaleDateString()}) 
+  </div>
+);
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -57,7 +63,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-full container mx-auto max-w-screen-lg px-6 flex flex-col justify-center items-start">
+    <div className="h-full container mx-auto max-w-screen-lg px-16 flex flex-col justify-center items-start">
       <div className="mb-3 text-3xl sm:text-7xl"> QUINN LIU </div>
       <div className="mb-2">Software Developer + Designer | Boston + Philadelhpia</div>
       <div className="mb-3.5">CS @ UPenn '25</div>
