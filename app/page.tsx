@@ -6,7 +6,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from 'react-
 import { IconContext } from 'react-icons';
 import Link from 'next/link';
 
-export const Navigation = () => (
+const Navigation = () => (
   <div className="mb-3 flex items-center text-gray-950 sm:font-semibold">
     <Link href="/experiences" className="bg-orange-400 p-2 hover:underline">EXPERIENCES</Link>
     {' '}
@@ -38,13 +38,13 @@ const Links = () => (
       </div>
 );
 
-export const BackHome = () => (
+const BackHome = () => (
   <div className="mb-4">
     <Link href="/"> {'<- HOME'}</Link>
   </div>
 );
 
-export const Footer = () => (
+const Footer = () => (
   <div className="sm:pb-8 pb-6 flex flex-col justify-center items-center">
     Made with 🗿 by Quinn Liu (Last Update: {new Date().toLocaleDateString()}) 
   </div>
