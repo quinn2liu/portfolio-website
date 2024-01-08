@@ -1,8 +1,8 @@
 "use client";
 
+import { useState } from 'react';
 import { Navigation, BackHome, Footer } from "../page";
 import { Inter } from 'next/font/google';
-import { useState } from 'react';
 import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -70,7 +70,7 @@ const EducationSection = () => {
     return (
       <div className="sm:pt-8 mb-6 flex flex-col space-y-3 justify-start w-full">
         <p className="text-2xl sm:text-5xl">EDUCATION</p>
-        <div className="sm:p-6 p-3 flex flex-col justify-start border-4 border-amber-100">
+        <div className="sm:p-6 p-3 flex flex-col justify-start border-4 dark:border-amber-100 border-gray-800">
               <div className="flex sm:flex-row flex-col items-start justify-between">
                   <div className="flex flex-row space-x-3 mb-3">
                     <img src="/penn.png" alt="" className="sm:h-8 h-5"/>
@@ -85,20 +85,18 @@ const EducationSection = () => {
     )
 }
 
-
-
 export default function Experiences() {
   return (
     <div>
       <div className=" flex flex-col justify-between items-start sm:h-full h-screen">
         <div className="container mx-auto max-w-screen-lg sm:px-6 px-5" suppressHydrationWarning>
-          <div className="mb-4 text-3xl sm:text-7xl sm:pt-16 pt-10">EXPERIENCES👔</div>
+          <div className="mb-4 text-3xl sm:text-7xl sm:pt-16 pt-10">EXPERIENCES</div>
           <Navigation />
           <BackHome />
           <div className=" flex flex-col justify-start items-center">
               <WorkSection />
               <EducationSection />
-              <a href = "/Quinn Liu Resume.pdf" target="_blank" rel="noopener noreferrer" className="sm:mt-12 mt-10 sm:p-6 p-4 mb-16 flex flex-col justify-center max-w-sm items-center border-4 dark:border-amber-100 border-gray-950">For more details, here's my resumé</a>
+              <a href = "/Quinn Liu Resume.pdf" target="_blank" rel="noopener noreferrer" className="sm:mt-12 mt-10 sm:p-6 p-4 mb-16 flex flex-col justify-center max-w-sm items-center border-4 dark:border-amber-100 border-gray-800 hover:underline">For more details, here's my resumé</a>
           </div>
         </div>
       </div>

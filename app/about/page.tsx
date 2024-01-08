@@ -1,6 +1,9 @@
+"use client";
+
 import { Navigation, BackHome, Footer } from "../page";
 import { Inter } from 'next/font/google';
 import './AboutPage.css';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -38,7 +41,7 @@ const AboutCommunitiesHobbies = ({content}: {content: React.ReactElement}) => {
     return (
         <div>
             <div className="sm:mb-8 mb-6 border-4 p-4 dark:border-rose-900 dark:bg-rose-900 border-rose-300 bg-rose-300">
-                <p className="sm:text-2xl text-xl font-semi">How I keep myself busy outside of work...</p>
+                <p className="sm:text-2xl text-xl font-semi">How I keep myself busy...</p>
             </div>
             <div className="mb-12 pt-6 flex flex-col sm:flex-row items-center sm:space-x-8">
                 <div className="flex flex-col space-y-6 flex-grow sm:max-w-md max-w-sm sm:mb-0 mb-8">
@@ -58,7 +61,7 @@ export default function About() {
   return (
     <div className="h-full container mx-auto max-w-screen-lg sm:px-8 px-6" suppressHydrationWarning>
         <div className="sm:pt-16 pt-10 flex flex-col justify-start items-start">
-            <div className="mb-4 text-3xl sm:text-7xl"> ABOUT ME📔</div>
+            <div className="mb-4 text-3xl sm:text-7xl"> ABOUT ME</div>
             <Navigation />
             <BackHome />
         </div>
