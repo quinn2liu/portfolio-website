@@ -101,7 +101,7 @@ const HackerText = () => {
   );
 }
 
-export default function Home() {
+const Home = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -128,3 +128,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

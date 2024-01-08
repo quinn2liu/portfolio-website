@@ -85,7 +85,7 @@ const EducationSection = () => {
     )
 }
 
-export default function Experiences() {
+const Experiences = () => {
   return (
     <div>
       <div className=" flex flex-col justify-between items-start sm:h-full h-screen">
@@ -105,3 +105,4 @@ export default function Experiences() {
   )
 }
 
+export default Experiences;

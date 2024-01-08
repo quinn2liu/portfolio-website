@@ -57,7 +57,7 @@ const AboutCommunitiesHobbies = ({content}: {content: React.ReactElement}) => {
 }
 
 //main about page layout
-export default function About() {
+const About = () => {
   return (
     <div className="h-full container mx-auto max-w-screen-lg sm:px-8 px-6" suppressHydrationWarning>
         <div className="sm:pt-16 pt-10 flex flex-col justify-start items-start">
@@ -111,3 +111,5 @@ export default function About() {
     </div>
     )
 }
+
+export default About;

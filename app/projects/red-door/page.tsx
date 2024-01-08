@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigation, BackHome } from "../../page";
 
-export default function RedDoor() {
+const RedDoor = () => {
     return (
         <div className="h-full container mx-auto max-w-screen-lg sm:px-8 px-6" suppressHydrationWarning>
             <div className="sm:pt-16 pt-10 flex flex-col justify-start items-start">
@@ -13,3 +13,5 @@ export default function RedDoor() {
         </div>
     );
 }
+
+export default RedDoor;

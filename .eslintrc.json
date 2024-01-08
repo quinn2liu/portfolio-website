@@ -1,13 +1,11 @@
-// {
-//   "extends": [
-//     "next/core-web-vitals",
-//     "airbnb",
-//     "airbnb-typescript"
-//   ],
-//   "parserOptions": {
-//     "project": "./tsconfig.json"
-//   },
-//   "rules": {
-//     "linebreak-style": ["error", "unix"]
-//   }
-// }
+{
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"]
+  }
+}
