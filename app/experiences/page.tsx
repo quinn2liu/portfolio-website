@@ -3,7 +3,7 @@
 import { Navigation, BackHome, Footer } from "../page";
 import { Inter } from 'next/font/google';
 import { useState } from 'react';
-
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,7 +21,7 @@ const ListItem = ({title, subtitle, date, content, image, darkColor, lightColor}
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div onClick={() => setIsOpen(!isOpen)} className={`mb-6 sm:p-6 p-4 flex flex-col space-y-3 justify-start dark:${darkColor} ${lightColor} w-full transition-all duration-500 ${isOpen ? 'h-80' : 'h-32'} overflow-visible`}>
+        <div onClick={() => setIsOpen(!isOpen)} className={`mb-6 sm:p-6 p-4 flex flex-col space-y-3 justify-start ${lightColor} ${darkColor} w-full transition-all duration-500 ${isOpen ? ' h-72' : 'h-32'} overflow-visible`}>
             <div className="flex flex-row items-start justify-between">
                 <div className="flex flex-row space-x-4">
                   <img src={image} alt="" className="h-8"/>
@@ -30,7 +30,7 @@ const ListItem = ({title, subtitle, date, content, image, darkColor, lightColor}
                 <p className="sm:text-xl text-md font-semi">{date}</p>
             </div>
             <p className="sm:text-xl text-md font-semi">{subtitle}</p>
-            <div className={`${inter.className} flex-grow text-lg font-normal transition-all duration-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-28'}`}>
+            <div className={`${inter.className} flex-grow text-lg font-normal transition-all duration-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-40'}`}>
                 {content}
             </div>
         </div>
@@ -39,26 +39,53 @@ const ListItem = ({title, subtitle, date, content, image, darkColor, lightColor}
 
 const WorkSection = () => {
   return (
-    <div>
+    <div className="pt-8">
       <div className="mb-4 text-3xl sm:text-5xl">WORK</div>
-      <ListItem title={"Symbotic"} subtitle={"Software Engineering Intern"} date={"May 2023 - August 2023"} image = {"/symbotic.png"} darkColor={"bg-rose-900"} lightColor={"bg-rose-300"}
+      <ListItem title={"Red Door Design + Staging"} subtitle={"Freelance Application Developer"} date={"January 2024 - Present"} image = {'/red-door.png'} darkColor="dark:bg-teal-600" lightColor='bg-indigo-300' 
+        content = {
+          <>
+            <ul className="space-y-2">
+              <li>{'•	Developing an end-to-end mobile application using React Native (Expo.js) and Firebase to create a user-friendly inventory management application for 50+ active users.'}</li>
+              <li>{'•	Implementing Firebase operations for efficient CRUD functionalities in real time database'}</li>
+              <li>{'•	Facilitating regular developer-client meetings to ensure a comprehensive custom solution.'}</li>
+              <li><Link href="/projects/red-door"><strong>{'View Project Case Study >>'}</strong></Link></li>
+            </ul>
+          </>
+        }
+      />
+      <ListItem title={"Symbotic"} subtitle={"Software Engineering Intern"} date={"May 2023 - August 2023"} image = {"/symbotic.png"} darkColor={"dark:bg-rose-900"} lightColor={"bg-rose-300"}
       content = {
         <>
           <ul className="space-y-2">
-              <li>•	Created and analyzed Python script tests for all UI functionality in Symbotic stack as a part of UI Test Automation team. Applications built on .NET and WPF frameworks and tested using SmartBear TestComplete software.</li>
+              <li>•	Created and analyzed Python script tests for all UI functionality in Symbotic stack as a part of UI Test Automation team. Applications built on .NET and WPF frameworks & tested using SmartBear TestComplete.</li>
               <li>{'•	Developed a PowerShell script for seamless integration with Symbotic’s Automated Test Framework, automating UI test execution and logging, improving test execution efficiency by ~75%.'}</li>
               <li>{'•	Created 40% of Breakpack functionality testing methods in the Symbotic tech stack.'}</li>
           </ul>
         </>} />
-        <ListItem title={"Red Door Inventory + Staging"} subtitle={"Freelance Application Developer"} date={"January 2024 - Present"} image = {"/red-door.png"} darkColor={"bg-indigo-500"} lightColor={"bg-indigo-600"} 
-        content = {
-        <>
-        </>
-      }
-      />
     </div>
   )
 }
+
+const EducationSection = () => {
+    return (
+      <div className="pt-8 mb-6 flex flex-col space-y-3 justify-start w-full">
+        <p className="text-3xl sm:text-5xl">EDUCATION</p>
+        <div className="sm:p-6 p-4 flex flex-col space-y-3 justify-start border-4 border-amber-100">
+              <div className="flex flex-row items-center justify-between">
+                  <div className="flex flex-row space-x-4">
+                    <img src="/penn.png" alt="" className="h-8"/>
+                    <p className="sm:text-3xl text-xl font-bold">University of Pennsylvania</p>
+                  </div>
+                  <p className="sm:text-xl text-md font-semi">2021 - 2025</p>
+              </div>
+              <p className="sm:text-xl text-md font-semi">BSE in Computer Science</p>
+        </div>
+      </div>
+      
+    )
+}
+
+
 
 export default function Experiences() {
   return (
@@ -69,7 +96,11 @@ export default function Experiences() {
             <Navigation />
             <BackHome />
             <WorkSection />
+            <EducationSection />
         </div>
+      </div>
+      <div className="mt-4 mb-8 flex justify-center items-center">
+        <a href = "/Quinn Liu Resume.pdf">For more details, here's my resumé </a>
       </div>
       <Footer />
     </div>
