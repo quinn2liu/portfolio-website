@@ -1,6 +1,5 @@
 import { Navigation, BackHome, Footer } from "../page";
 import { Inter } from 'next/font/google';
-import { FaStrava } from "react-icons/fa";
 import './AboutPage.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -85,7 +84,9 @@ export default function About() {
 
                     <li>⚽ <strong>Playing and watching soccer.</strong> Born to be a 6, forced to be a fullback. Proud and delusional Tottenham Hotspur fan (#COYS).</li>
 
-                    <li>🏃‍♂️ <strong>Running.</strong> Went on a hero's journey from hating cardio to now training for a half marathon. <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"><strong><u>Follow my Strava!!!<FaStrava /></u></strong></a></li>
+                    <li>
+                        🏃‍♂️ <strong>Running.</strong> Went on a hero's journey from hating cardio to now training for a half marathon. <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"><strong><u>Follow my Strava!!!</u></strong></a>
+                    </li>
                     
                     <li> 
                         <p className="mb-6"><strong>🎧 Listening to music.</strong> It's cliché but I like listening to most genres of music. I'm also a for-fun DJ. Here's my all time favorites playlist (currently ordered up to #82).</p>
