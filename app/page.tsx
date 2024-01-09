@@ -4,17 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
 import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
-import Link from 'next/link';
+import Navigation from './components/Navigation';
 
-const Navigation = () => (
-  <div className="mb-3 flex items-center text-gray-950 sm:font-semibold">
-    <Link href="/experiences" className="bg-orange-400 p-2 hover:underline">EXPERIENCES</Link>
-    {' '}
-    <Link href="/projects" className="bg-sky-400 p-2 hover:underline">PROJECTS</Link>
-    {' '}
-    <Link href="/about" className="bg-red-400 p-2 hover:underline">ABOUT</Link>
-  </div>
-);
 
 const Links = () => (
   <div className="mb-3.5 flex items-center space-x-10">
@@ -37,19 +28,6 @@ const Links = () => (
         </IconContext.Provider>
       </div>
 );
-
-const BackHome = () => (
-  <div className="mb-4">
-    <Link href="/"> {'<- HOME'}</Link>
-  </div>
-);
-
-const Footer = () => (
-  <div className="sm:pb-8 pb-6 flex flex-col justify-center items-center">
-    Made with 🗿 by Quinn Liu (Last Update: {new Date().toLocaleDateString()}) 
-  </div>
-);
-
 
 const HackerText = () => {
   const [text, setText] = useState('QUINN LIU');

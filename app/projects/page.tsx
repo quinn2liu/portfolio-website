@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navigation, BackHome } from "../page";
+import BackHome from '../components/BackHome';
+import Navigation from '../components/Navigation';
 
 const Projects = () => {
     return (

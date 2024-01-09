@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from 'react';
-import { Navigation, BackHome, Footer } from "../page";
+import Footer from '../components/Footer';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import BackHome from '../components/BackHome';
+import Navigation from '../components/Navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
