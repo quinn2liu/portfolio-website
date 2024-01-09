@@ -6,6 +6,8 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "@next/next/no-img-element": "off",
+    "react/no-unescaped-entities" : "off"
   }
 }
