@@ -1,6 +1,6 @@
-import React from 'react';
-import BackHome from '../components/BackHome';
-import Navigation from '../components/Navigation';
+import React from "react";
+import BackHome from "../components/BackHome";
+import Navigation from "../components/Navigation";
 
 const Projects = () => {
     return (
@@ -9,7 +9,7 @@ const Projects = () => {
                 <div className="mb-4 text-3xl sm:text-7xl"> PROJECTS</div>
                 <Navigation />
                 <BackHome />
-                <p className='sm:text-2xl text-xl'>LOADING...</p>
+                <p className="sm:text-2xl text-xl">LOADING...</p>
             </div>
         </div>
     );

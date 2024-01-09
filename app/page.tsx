@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { useTheme } from 'next-themes';
-import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
-import Navigation from './components/Navigation';
+import React, { useState, useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
+import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import Navigation from "./components/Navigation";
 
 
 const Links = () => (
   <div className="mb-3.5 flex items-center space-x-10">
-        <IconContext.Provider value={{ size: '1.75rem' }}>
+        <IconContext.Provider value={{ size: "1.75rem" }}>
           <a href="https://www.linkedin.com/in/quinnnliu/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
@@ -30,9 +30,9 @@ const Links = () => (
 );
 
 const HackerText = () => {
-  const [text, setText] = useState('QUINN LIU');
+  const [text, setText] = useState("QUINN LIU");
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const originalText = 'QUINN LIU';
+  const originalText = "QUINN LIU";
   let interval = useRef<NodeJS.Timeout | null>(null);
   let iteration = useRef(0);
 
@@ -95,7 +95,7 @@ const Home = () => {
     <div className="h-full container mx-auto max-w-screen-lg px-16 flex flex-col justify-center items-start">
       <div className="mb-3 text-3xl sm:text-7xl"> <HackerText /> </div>
       <div className="mb-2">Software Developer + Designer | Boston + Philadelhpia</div>
-      <div className="mb-3.5">CS @ UPenn '25</div>
+      <div className="mb-3.5">CS @ UPenn "25</div>
       <Links />
       <Navigation />
       <div>
