@@ -7,7 +7,6 @@ import BackHome from '../components/BackHome';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 const ImageBlock = ({images}: {images: string[]}) => {
