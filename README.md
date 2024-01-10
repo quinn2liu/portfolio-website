@@ -2,7 +2,7 @@ This project was created using Next.js 14, Tailwind CSS, and is deployed using ?
 
 This is my first portfolio site and I'm really happy with how it turned out! A goal of mine might be to create a new version every year.
 
-Credits: The <HackerText /> component comes from Hyperplexed (https://www.youtube.com/watch?v=W5oawMJaXbU&ab_channel=Hyperplexed). I am nowhere near good enough to fully comprehend the code especially translated into a react component.
+Credits: The HackerText component comes from Hyperplexed (https://www.youtube.com/watch?v=W5oawMJaXbU&ab_channel=Hyperplexed). I am nowhere near good enough to fully comprehend the code especially translated into a react component.
 
 Here are some potential features I will be looking to implement in the future:
 
