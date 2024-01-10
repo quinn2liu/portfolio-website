@@ -94,8 +94,8 @@ const Home = () => {
   return (
     <div className="h-full container mx-auto max-w-screen-lg px-16 flex flex-col justify-center items-start">
       <div className="mb-3 text-3xl sm:text-7xl"> <HackerText /> </div>
-      <div className="mb-2">Software Developer + Designer | Boston + Philadelhpia</div>
-      <div className="mb-3.5">CS @ UPenn &apos;25</div>
+      <div className="mb-2">Software Developer + Designer | Boston + Philadelphia</div>
+      <div className="mb-3.5">CS @ UPenn '25</div>
       <Links />
       <Navigation />
       <div>
