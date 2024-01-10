@@ -1,5 +1,3 @@
-"use client";
-
 import { Inter } from "next/font/google";
 import "./AboutPage.css";
 import React from "react";
@@ -27,11 +25,11 @@ const AboutInfoBlock = ({images, content, imageLeft}: {images: string[], content
         imageLeft ? (
             <div className="sm:mb-12 mb-8 pt-6 flex flex-col sm:flex-row flex-grow sm:items-center items-start sm:space-x-8">
                 <ImageBlock images={images} />
-                <p className= {`${inter.className} flex-grow max-w-md sm:text-2xl text-lg`} >{content}</p>
+                <div className= {`${inter.className} flex-grow max-w-md sm:text-2xl text-lg`} >{content}</div>
             </div>
         ) : (
             <div className="sm:mb-16 mb-12 pt-6 flex flex-col sm:flex-row sm:items-center items-start sm:space-x-8">
-                <p className= {`${inter.className} flex-grow max-w-lg sm:text-2xl text-lg sm:order-1 order-2`} >{content}</p>
+                <div className= {`${inter.className} flex-grow max-w-lg sm:text-2xl text-lg sm:order-1 order-2`} >{content}</div>
                 <div className="sm:order-2 order-1"><ImageBlock images={images}/></div>
             </div>
         )
@@ -51,7 +49,7 @@ const AboutCommunitiesHobbies = ({content}: {content: React.ReactElement}) => {
                     <img src="/images/homiess.JPG" alt="" className="hidden sm:block transition ease-in-out hover:-translate-y-1 hover:scale-105"/>
                     <img src="/images/bike.jpeg" alt="" className="hidden sm:block transition ease-in-out hover:-translate-y-1 hover:scale-105"/>
                 </div>
-                <p className= {`${inter.className} flex-grow max-w-2xl sm:text-xl text-lg font-normal`}>{content}</p>
+                <div className= {`${inter.className} flex-grow max-w-2xl sm:text-xl text-lg font-normal`}>{content}</div>
             </div>
         </div>
         
@@ -67,21 +65,21 @@ const About = () => {
             <Navigation />
             <BackHome />
         </div>
-        <AboutInfoBlock images={["/images/me-goat.jpg", "/images/me-smile.jpeg", "images/halloween.JPG"]}
+        <AboutInfoBlock images={["/images/me-goat.jpg", "/images/me-pro.jpg", "images/halloween.JPG"]}
             content={ 
-                <>
+                <p>
                     <strong>Hi! I'm Quinn, a developer (+ wannabe designer) from the Greater Boston Area.</strong> I want to solve real-world problems with digital solutions while delivering amazing user experiences.
-                </>
+                </p>
             } imageLeft={true}/>
         <AboutInfoBlock images={["/images/me-kyuho.jpg","/images/PC.jpg", "images/tip-squad.JPG"]}
             content={ 
-            <>
+            <div>
                 <strong>I'm a big believer in giving back to my communities.</strong> I love to invest myself into the organizations and groups of people I am a part of.
-            </>
+            </div>
                 } imageLeft={false}/>
         <AboutCommunitiesHobbies
         content= {
-            <>
+            <div>
                 <ul className="space-y-8">
                     <li>⚒️ <strong>President</strong> of <a href="https://upennthetatau.com/" target="_blank" rel="noopener noreferrer"><strong><u>Theta Tau</u></strong></a>, UPenn's co-ed preprofessional engineering fraternity.</li>
 
@@ -107,7 +105,7 @@ const About = () => {
                     </li>
                     <li>🎮 <strong>Video Games.</strong> Always down to play some Super Smash Bros, Mario Kart, Valorant, or anything else.</li>
                 </ul>
-            </>
+            </div>
         }/>
         <Footer />
     </div>

@@ -8,9 +8,9 @@ import Navigation from "./components/Navigation";
 
 
 const Links = () => (
-  <div className="mb-3.5 flex items-center space-x-10">
+  <div className="mb-3.5 flex items-center sm:space-x-10 space-x-7">
         <IconContext.Provider value={{ size: "1.75rem" }}>
-          <a href="https://www.linkedin.com/in/quinnnliu/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/quinnnliu/" target="_blank" rel="noopener noreferrer" className="hover:underline">
             <FaLinkedin />
           </a>
           <a href="https://github.com/quinn2liu" target="_blank" rel="noopener noreferrer">

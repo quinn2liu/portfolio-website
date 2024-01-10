@@ -12,10 +12,7 @@
 
 @media screen and (max-width: 648px) {
     .tile {
-        width: 30vmin;
-    }
-    .tile:hover {
-        width: 120vmin;
+        width: 28vmin;
     }
 }
 
