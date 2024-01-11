@@ -68,13 +68,13 @@ const About = () => {
         <AboutInfoBlock images={["/images/me-goat.jpg", "/images/me-pro.jpg", "images/halloween.JPG"]}
             content={ 
                 <p>
-                    <strong>Hi! I'm Quinn, a developer (+ wannabe designer) from the Greater Boston Area.</strong> I want to solve real-world problems with digital solutions while delivering amazing user experiences.
+                    <strong>Hi! I'm Quinn, a developer (+ wannabe designer) from the Greater Boston Area.</strong> I want to solve real-world problems with digital solutions while delivering great user experiences.
                 </p>
             } imageLeft={true}/>
-        <AboutInfoBlock images={["/images/me-kyuho.jpg","/images/PC.jpg", "images/tip-squad.JPG"]}
+        <AboutInfoBlock images={["/images/me-kyuho.jpg", "/images/PC.jpg", "images/tip-squad.JPG"]}
             content={ 
             <div>
-                <strong>I'm a big believer in giving back to my communities.</strong> I love to invest myself into the organizations and groups of people I am a part of.
+                <strong>I love trying new things and meeting new people.</strong> I'm always down to grab a meal, play some games, or just chat. Feel free to reach out!
             </div>
                 } imageLeft={false}/>
         <AboutCommunitiesHobbies

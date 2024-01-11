@@ -16,8 +16,6 @@ Here are some potential features I will be looking to implement in the future:
 
 4. Actually understand the HackerText component.
 
-5. get new pictures
-
 Here are some potential fixes I need to put in place:
 
 1. the images on the about page when on mobile aren't animating properly, reconsider how to get rid of that
