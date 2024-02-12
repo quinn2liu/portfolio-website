@@ -83,7 +83,7 @@ const About = () => {
                 <ul className="space-y-8">
                     <li>⚒️ <strong>President</strong> of <a href="https://upennthetatau.com/" target="_blank" rel="noopener noreferrer"><strong><u>Theta Tau</u></strong></a>, UPenn's co-ed preprofessional engineering fraternity.</li>
 
-                    <li>🤸‍♂️ (Retired) <strong>Head Counselor</strong> for <a href="necysc.org"><strong><u>New Englanc Chinese Youth Summer Camp</u></strong></a> (NECYSC), a volunteer and student-run summer camp serving K-12 Chinese-American youth in the New England area.</li>
+                    <li>🤸‍♂️ (Retired) <strong>Head Counselor</strong> for <a href="necysc.org"><strong><u>New England Chinese Youth Summer Camp</u></strong></a> (NECYSC), a volunteer and student-run summer camp serving K-12 Chinese-American youth in the New England area.</li>
 
                     <li>⚽ <strong>Playing and watching soccer.</strong> Born to be a 6, forced to be a fullback. Proud and delusional Tottenham Hotspur fan (#COYS).</li>
 
