@@ -11,8 +11,6 @@ export const metadata: Metadata = {
   description: 'Quinn Liu is a current student at the University of Pennsylvania majoring in Computer Science with minors in Math and Design. He is interested in full-stack development and is currently looking for full-time opportunities in software engineering.',
 };
 
-
-
 export default function RootLayout({ children }: {children: ReactNode}) {
   return (
     <html lang="en" className="h-full">
