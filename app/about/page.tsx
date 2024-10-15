@@ -114,7 +114,7 @@ const About = () => {
                     </li>
                     <li>🎮 <strong>Video Games.</strong> I've been really enjoying Boomerang Fu recently.</li>
 
-                    <li>🛹 <strong>Skateboarding.</strong> All I can do so far is ollie.</li>
+                    <li>🛹 <strong>Skateboarding.</strong> All I can do so far is ollie :)</li>
                 </ul>
             </div>
         }/>

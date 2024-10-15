@@ -7,7 +7,7 @@ import Navigation from "./Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-type ListItemProps = {
+type ExperienceItemProps = {
     title: string;
     subtitle: string;
     date: string;
@@ -17,7 +17,7 @@ type ListItemProps = {
     lightColor: string;
   };
 
-export const ListItem = ({title, subtitle, date, content, image, darkColor, lightColor}: ListItemProps) => {
+export const ExperienceItem = ({title, subtitle, date, content, image, darkColor, lightColor}: ExperienceItemProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
