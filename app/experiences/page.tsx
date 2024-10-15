@@ -51,7 +51,7 @@ const WorkSection = () => {
 
 const EducationSection = () => {
     return (
-      <div className="sm:pt-8 mb-6 flex flex-col space-y-3 justify-start w-full">
+      <div className="sm:pt-8 sm:mb-6 flex flex-col space-y-3 justify-start w-full">
         <p className="text-2xl sm:text-5xl">EDUCATION</p>
         <div className="sm:p-6 p-3 flex flex-col justify-start border-4 dark:border-amber-100 border-gray-800">
               <div className="flex sm:flex-row flex-col items-start justify-between">
@@ -70,8 +70,7 @@ const EducationSection = () => {
 
 const Experiences = () => {
   return (
-    <div>
-      <div className=" flex flex-col justify-between items-start sm:h-full h-screen">
+      <div className=" flex flex-col justify-between items-center sm:h-full h-screen">
         <div className="container mx-auto max-w-screen-lg sm:px-6 px-5" suppressHydrationWarning>
           <div className="mb-4 text-3xl sm:text-7xl sm:pt-16 pt-10">EXPERIENCES</div>
           <Navigation />
@@ -79,12 +78,11 @@ const Experiences = () => {
           <div className=" flex flex-col justify-start items-center">
               <WorkSection />
               <EducationSection />
-              <a href = "/Quinn Liu Full Time Resume - Fall 2024.pdf" target="_blank" rel="noopener noreferrer" className="sm:mt-12 mt-10 sm:p-6 p-4 mb-16 flex flex-col justify-center max-w-sm items-center border-4 dark:border-amber-100 border-gray-800 hover:underline">For more details, here's my resumé</a>
+              <a href = "/Quinn Liu Full Time Resume - Fall 2024.pdf" target="_blank" rel="noopener noreferrer" className="sm:my-12 my-8 sm:p-6 p-3  flex flex-col justify-center max-w-sm items-center border-4 dark:border-amber-100 border-gray-800 hover:underline">For more details, here's my resumé</a>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
   )
 }
 

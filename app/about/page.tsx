@@ -49,8 +49,8 @@ const Involvement = ({organization, title, image, link}: InvolementTypes) => {
     return (
         <a href={link} className="flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 sm:w-44 sm:h-44 max-h-32 text-xs" target="_blank">
             <img src={image} alt="" className="sm:max-h-32 max-h-24"/>
-            <p className="pt-2">{organization}</p>
-            <p><i>{title}</i></p>
+            <p className="pt-2 sm:text-sm text-xs">{organization}</p>
+            <p className="sm:text-sm text-xs"><i>{title}</i></p>
         </a>
         
     )
@@ -66,8 +66,8 @@ const About = () => {
             <BackHome />
         </div>
 
-        <div className="flex flex-row items-center justify-between mb-8">
-            <div className="m-8 sm:text-lg">
+        <div className="flex sm:flex-row flex-col items-center justify-between mb-8">
+            <div className="sm:text-lg sm:mr-4">
                 <p className="pb-4">
                     <strong>Hi! I'm Quinn, a developer from the Greater Boston Area.</strong> I want to solve real-world problems with digital solutions and am interested in cloud computing, system design, and web development.
                 </p>
@@ -75,7 +75,7 @@ const About = () => {
                     I'm currently a Senior at the University of Pennsylvania studying Computer Science with minors in Math and Design.
                 </p>
             </div>
-            <img src="/images/me-pro.jpg" alt="" className="max-w-52 transition ease-in-out hover:scale-105"/>
+            <img src="/images/me-pro.jpg" alt="" className="sm:mt-8 mt-8 max-w-52 transition ease-in-out hover:scale-105"/>
 
         </div>
 
