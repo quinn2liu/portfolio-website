@@ -26,7 +26,7 @@ export const ProjectItem = ({name, date, description, technologies, image, link}
                         </div>
                     ))}
                 </div>
-                {link && <a className='pt-4 underline' href={link}>Learn More</a>}
+                {link && <a className='pt-4 underline' href={link} target="_blank">Learn More</a>}
             </div>
             <img src={image} alt="" className='sm:block hidden sm:h-32 h-20 ml-12 mr-6'/>
         </div>
