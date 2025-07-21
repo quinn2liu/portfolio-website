@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import BackHome from "./BackHome";
-import Navigation from "./Navigation";
+import BackHome from "../BackHome";
+import Navigation from "../navigation/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,7 +1,7 @@
 import React from "react";
-import BackHome from "../components/BackHome";
-import Navigation from "../components/Navigation";
-import { ProjectItem } from "../components/ProjectItem";
+import BackHome from "../components/navigation/BackHome";
+import Navigation from "../components/navigation/Navigation";
+import { ProjectItem } from "../components/projects/ProjectItem";
 import Footer from "../components/Footer";
 
 const Projects = () => {

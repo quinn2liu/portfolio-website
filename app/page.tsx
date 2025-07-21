@@ -4,8 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import Navigation from "./components/Navigation";
-
+import Navigation from "./components/navigation/Navigation";
 
 const Links = () => (
   <div className="mb-3.5 flex items-center sm:space-x-10 space-x-7">
@@ -15,12 +14,6 @@ const Links = () => (
           </a>
           <a href="https://github.com/quinn2liu" target="_blank" rel="noopener noreferrer">
             <FaGithub />
-          </a>
-          <a href="https://www.instagram.com/quinnnliu/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-          <a href="https://open.spotify.com/user/g7x1ihgj3kf253a6lujcu1r30?si=e76e03b2532d4966" target="_blank" rel="noopener noreferrer">
-            <FaSpotify />
           </a>
           <a href="mailto:quinn2liu@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
@@ -94,7 +87,7 @@ const Home = () => {
   return (
     <div className="h-full container mx-auto max-w-screen-lg px-16 flex flex-col justify-center items-start">
       <div className="mb-3 text-3xl sm:text-7xl"> <HackerText /> </div>
-      <div className="mb-2">Software Developer | Boston + Philadelphia</div>
+      <div className="mb-2">Software Engineer | Boston</div>
       <div className="mb-3.5">CS @ UPenn '25</div>
       <Links />
       <Navigation />

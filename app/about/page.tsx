@@ -1,8 +1,8 @@
 import { Inter, Ultra } from "next/font/google";
 import "./AboutPage.css";
 import React from "react";
-import BackHome from "../components/BackHome";
-import Navigation from "../components/Navigation";
+import BackHome from "../components/navigation/BackHome";
+import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
