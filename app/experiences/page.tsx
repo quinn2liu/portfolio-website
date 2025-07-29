@@ -4,7 +4,7 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import BackHome from "../components/navigation/BackHome";
+import BackHome from "../components/BackHome";
 import Navigation from "../components/navigation/Navigation";
 import  { ExperienceItem } from "../components/experiences/ExperienceItem";
 
