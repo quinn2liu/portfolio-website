@@ -69,26 +69,25 @@ const About = () => {
         <div className="flex sm:flex-row flex-col items-center justify-between mb-8">
             <div className="sm:text-lg sm:mr-4">
                 <p className="pb-4">
-                    <strong>Hi! I'm Quinn, a developer from the Greater Boston Area.</strong> I want to solve real-world problems with digital solutions and am interested in cloud computing, system design, and web development.
+                    <strong>Hi! I'm Quinn, a software engineer from the Greater Boston Area.</strong> 
                 </p>
                 <p>
-                    I'm currently a Senior at the University of Pennsylvania studying Computer Science with minors in Math and Design.
+                    I enjoy working across the stack to build thoughtful, user-focused applications. I like combining design and engineering to solve problems with simple and elegant solutions. I work primarily with Swift and Python, but am comfortable working with a range of other languages and frameworks. 
                 </p>
             </div>
             <img src="/images/me-pro.jpg" alt="" className="sm:mt-8 mt-8 max-w-52 transition ease-in-out hover:scale-105"/>
 
         </div>
 
-        <AboutInvolvements
+        {/* <AboutInvolvements
             content={
                 <div className="flex flex-row items-center justify-between sm:px-12 px-4 py-8">
                     <Involvement organization={"Theta Tau"} title={"Regent"} image={"/images/thetatau.png"} link={"https://www.upennthetatau.com"}/>
                     <Involvement organization={"ESAC"} title={"Club Liaison"} image={"/images/esac.png"} link={"https://www.pennesac.com"}/>
                     <Involvement organization={"Hexagon Senior Society"} title={"Member"} image={"/images/hex.png"} link={"https://en.wikipedia.org/wiki/University_of_Pennsylvania_senior_societies#Hexagon_Senior_Society/"}/>
                 </div>
-                
             }
-        />
+        /> */}
 
         <AboutHobbies
         content= {
@@ -114,7 +113,7 @@ const About = () => {
                     </li>
                     <li>🎮 <strong>Video Games.</strong> I've been really enjoying Boomerang Fu recently.</li>
 
-                    <li>🛹 <strong>Skateboarding.</strong> All I can do so far is ollie :)</li>
+                    {/* <li>🛹 <strong>Skateboarding.</strong> All I can do so far is ollie :)</li> */}
                 </ul>
             </div>
         }/>

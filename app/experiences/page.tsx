@@ -78,7 +78,7 @@ const Experiences = () => {
           <div className=" flex flex-col justify-start items-center">
               <WorkSection />
               <EducationSection />
-              <a href = "/Quinn Liu Full Time Resume - Fall 2024.pdf" target="_blank" rel="noopener noreferrer" className="sm:my-12 my-8 sm:p-6 p-3  flex flex-col justify-center max-w-sm items-center border-4 dark:border-amber-100 border-gray-800 hover:underline">For more details, here's my resumé</a>
+              <a href = "/Quinn Liu Resume - Summer 2025.pdf" target="_blank" rel="noopener noreferrer" className="sm:my-12 my-8 sm:p-6 p-3  flex flex-col justify-center max-w-sm items-center border-4 dark:border-amber-100 border-gray-800 hover:underline">For more details, here's my resumé</a>
           </div>
         </div>
         <Footer />

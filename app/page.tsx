@@ -16,12 +16,6 @@ const Links = () => (
           <a href="https://github.com/quinn2liu" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://www.instagram.com/quinnnliu/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-          <a href="https://open.spotify.com/user/g7x1ihgj3kf253a6lujcu1r30?si=e76e03b2532d4966" target="_blank" rel="noopener noreferrer">
-            <FaSpotify />
-          </a>
           <a href="mailto:quinn2liu@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>
@@ -94,7 +88,7 @@ const Home = () => {
   return (
     <div className="h-full container mx-auto max-w-screen-lg px-16 flex flex-col justify-center items-start">
       <div className="mb-3 text-3xl sm:text-7xl"> <HackerText /> </div>
-      <div className="mb-2">Software Developer | Boston + Philadelphia</div>
+      <div className="mb-2">Software Developer | Boston</div>
       <div className="mb-3.5">CS @ UPenn '25</div>
       <Links />
       <Navigation />
