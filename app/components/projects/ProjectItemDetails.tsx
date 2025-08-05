@@ -1,3 +1,9 @@
 import React from "react";
 
-export default ProjectItemDetails 
+const ProjectItemDetails = () => {
+    return ({
+
+    });
+}
+
+export default ProjectItemDetails;
