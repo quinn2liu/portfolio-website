@@ -11,16 +11,57 @@ interface AboutSectionProps {
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ isSelected }) => {
-    const { theme, setTheme } = useTheme();
     
     return (
-        <div className="space-y-3">
-            <div className="text-3xl sm:text-7xl"> <HackerText /> </div>
+        <>
+            {isSelected ? (
+                <SelectedContent />
+            ) : (
+                <MinimizedContent />
+            )}
+        </>
+    );
+}
+
+export default AboutSection;
+
+const AboutImage = (imagePath: string) => {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+const SelectedContent = () => {
+    const { theme, setTheme } = useTheme();
+
+    return (
+        <div className="flex flex-col items-start justify-center h-full w-full space-y-4 p-12">
+            <div className="text-3xl sm:text-3xl  font-semibold"> <HackerText /> </div>
+
+            <div>
+                item 1
+            </div>
+
+            <div>
+                item 2
+            </div>
+        </div>
+    )
+}
+
+const MinimizedContent = () => {
+    const { theme, setTheme } = useTheme();
+
+    return (
+        <div className="flex flex-col justify-start space-y-3">
+            <div className="text-2xl sm:text-6xl"> <HackerText /> </div>
 
             <div>&lt; software engineer | boston / &gt;</div>
-            
+    
             <Links />
-            
+    
             <div>
                 <button 
                     onClick={(e) => {
@@ -31,11 +72,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ isSelected }) => {
                     {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
                 </button>
             </div>
-        </div>  
-    );
+        </div>
+    )
 }
 
-export default AboutSection;
+
 
 const HackerText = () => {
     const [text, setText] = useState("QUINN LIU");
@@ -88,9 +129,9 @@ const HackerText = () => {
 }
 
 const Links = () => (
-    <div className="flex items-center sm:space-x-10 space-x-7">
-        <IconContext.Provider value={{ size: "1.75rem" }}>
-        <a href="https://www.linkedin.com/in/quinnnliu/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+    <div className="flex items-center sm:space-x-7 space-x-7">
+        <IconContext.Provider value={{ size: "1.5rem" }}>
+        <a href="https://www.linkedin.com/in/quinnnliu/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
         </a>
         <a href="https://github.com/quinn2liu" target="_blank" rel="noopener noreferrer">

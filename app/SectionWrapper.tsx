@@ -108,9 +108,9 @@ const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
 const getSelectedClasses = (sectionType: SectionProps['sectionType']): string => {
     switch (sectionType) {
         case 'about':
-        return 'shadow-2xl w-[50vw] h-[90vh]';
+        return 'shadow-2xl w-[85vw] h-[90vh]';
         case 'experiences':
-        return 'shadow-2xl w-[50vw] h-[90vh]';
+        return 'shadow-2xl w-[85vw] h-[90vh]';
         case 'projects':
         return 'shadow-2xl w-[85vw] h-[90vh]';
         case 'blog':
@@ -134,12 +134,12 @@ const getInactiveClasses = (sectionType: SectionProps['sectionType']): string =>
 const getMinimizedClasses = (sectionType: SectionProps['sectionType'], sameColumn: boolean): string => {
     switch (sectionType) {
         case 'about':
-        return sameColumn ? 'w-[50vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
+        return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
         case 'experiences':
-        return sameColumn ?  'w-[50vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
+        return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
         case 'projects':
-        return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[50vw] h-[65vh]';
+        return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
         case 'blog':
-        return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[50vw] h-[35vh]';
+        return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
     }
 };
