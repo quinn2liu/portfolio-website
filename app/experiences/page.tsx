@@ -31,7 +31,7 @@ const WorkSection = () => {
         <>
           <ul className="space-y-2">
               <li>{"•	Implemented pallet sequencing algorithm team’s observability platform for both historical data (logs) and live metrics. Integrated live metrics intake and storage from within the team’s C# .NET service. "}</li>
-              <li>{"•	Configurated Prometheus time series database for metrics data storage and Grafana dashboards for visualization. Deployed and managed said services in Docker using Docker-Compose. Automated service processes as cron jobs."}</li>
+              <li>{"•	Configured Prometheus time series database for metrics data storage and Grafana dashboards for visualization. Deployed and managed said services in Docker using Docker-Compose. Automated service processes as cron jobs."}</li>
               <li>{"•	Created 3 data visualization dashboards to for system health, algorithm performance, and release comparisons."}</li>
               <li>{"•	Improved existing logs processing PowerShell script speed and memory efficiency by 75% and 89%, respectively."}</li>
           </ul>
