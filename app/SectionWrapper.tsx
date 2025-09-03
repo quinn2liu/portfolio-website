@@ -86,8 +86,8 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
         case 'experiences':
         return (selectedSection == 'about');
         case 'projects':
-        return (selectedSection == 'blog');
-        case 'blog':
+        return (selectedSection == 'fun');
+        case 'fun':
         return (selectedSection == 'projects');
         default:
         return false;
@@ -96,7 +96,7 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
 
 const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
-        p-4 flex flex-row items-start justify-between border-8
+        p-5 flex flex-row items-start justify-between border-8
         dark:bg-gray-900 bg-amber-50
         hover:rounded-3xl
         transition-all duration-200
@@ -109,7 +109,7 @@ const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
         return `border-blue-400 ${commonClasses}`;
         case 'projects':
         return `border-red-400 ${commonClasses}`;
-        case 'blog':
+        case 'fun':
         return `border-amber-400 group ${commonClasses}`;
     }
 };
@@ -122,7 +122,7 @@ const getSelectedClasses = (sectionType: SectionProps['sectionType']): string =>
         return 'shadow-2xl w-[85vw] h-[90vh]';
         case 'projects':
         return 'shadow-2xl w-[85vw] h-[90vh]';
-        case 'blog':
+        case 'fun':
         return 'shadow-2xl w-[85vw] h-[90vh]';
     }
 };
@@ -135,7 +135,7 @@ const getInactiveClasses = (sectionType: SectionProps['sectionType']): string =>
         return 'w-[35vw] h-[65vh]';
         case 'projects':
         return 'w-[65vw] h-[65vh]';
-        case 'blog':
+        case 'fun':
         return 'w-[65vw] h-[35vh]';
     }
 };
@@ -148,7 +148,7 @@ const getMinimizedClasses = (sectionType: SectionProps['sectionType'], sameColum
         return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
         case 'projects':
         return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
-        case 'blog':
+        case 'fun':
         return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
     }
 };

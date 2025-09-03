@@ -47,8 +47,6 @@ const SelectedContent = () => {
             </div>
 
             <Links />
-
-            <ThemeChangeButton />
         </div>
     )
 }
@@ -60,24 +58,7 @@ const MinimizedContent = () => {
             <div className="text-2xl sm:text-6xl"> <HackerText /> </div>
 
             <div>&lt; software engineer | boston / &gt;</div>
-        
-            <ThemeChangeButton />
         </div>
-    )
-}
-
-const ThemeChangeButton = () => {
-    const { theme, setTheme } = useTheme();
-
-    return (
-        <button 
-            onClick={(e) => {
-                e.stopPropagation(); // Prevent triggering the parent onClick
-                setTheme(theme == "dark" ? "light" : "dark");
-            }}
-        >
-            {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
-        </button>
     )
 }
 

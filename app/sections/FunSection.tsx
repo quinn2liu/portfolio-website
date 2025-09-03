@@ -6,16 +6,16 @@ import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from "react-
 import { IconContext } from "react-icons";
 import { SectionProps } from "../types/section";
 
-const BlogSection = () => {
+const FunSection = () => {
   const { theme, setTheme } = useTheme();
   
   return (
     <div>
-        BLOG !!!
+        FUN !!!
     </div>
             
     );
 }
 
-export default BlogSection;
+export default FunSection;
 

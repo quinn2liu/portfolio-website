@@ -4,9 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import AboutSection from "./sections/AboutSection";
 import ExperienceSection from "./sections/ExperienceSection";
 import ProjectSection from "./sections/ProjectSection";
-import BlogSection from "./sections/BlogSection";
+import FunSection from "./sections/FunSection";
 import { SectionType } from "./types/section";
 import SectionWrapper from "./SectionWrapper";
+import { useTheme } from "next-themes";
 
 const Home = () => {
     const [selectedSection, setselectedSection] = useState<SectionType>(null);
@@ -20,7 +21,7 @@ const Home = () => {
     }, [selectedSection]);
 
     return (
-        <div className="h-screen">
+        <div className="h-screen relative">
             <div className="flex flex-row w-full h-full">
                 <div className="flex flex-col flex-2">
                     <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection('about')} sectionType="about">
@@ -38,14 +39,34 @@ const Home = () => {
                         <ProjectSection />
                     </SectionWrapper>
 
-                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection('blog')} sectionType="blog">
-                        <BlogSection />
+                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection('fun')} sectionType="fun">
+                        <FunSection />
                     </SectionWrapper>   
                 </div>
                 
             </div>
+
+            <ThemeChangeButton />
+            
         </div>
     );
+}
+
+const ThemeChangeButton = () => {
+    const { theme, setTheme } = useTheme();
+
+    return (
+        <button
+            className="absolute bottom-4 right-4 z-50 px-4 py-2 rounded-2xl bg-amber-200 dark:bg-gray-800"
+
+            onClick={(e) => {
+                e.stopPropagation(); // Prevent triggering the parent onClick
+                setTheme(theme == "dark" ? "light" : "dark");
+            }}
+        >
+            {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
+        </button>
+    )
 }
 
 export default Home;

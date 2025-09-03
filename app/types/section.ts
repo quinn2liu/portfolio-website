@@ -4,4 +4,4 @@ export interface SectionProps {
   sectionType: NonNullable<SectionType>;
 }
 
-export type SectionType = 'about' | 'experiences' | 'projects' | 'blog' | null;
+export type SectionType = 'about' | 'experiences' | 'projects' | 'fun' | null;
