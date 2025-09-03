@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SectionProps } from './types/section';
 import { SectionType } from './types/section';
+import { FaExpandAlt, FaCompressAlt } from "react-icons/fa";
 import { isatty } from 'tty';
 
 interface SectionWrapperProps extends SectionProps {
@@ -63,6 +64,14 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
                             : child
                     ) 
                 }            
+
+                <div className='opacity-0 dark:group-hover:opacity-90 group-hover:opacity-50 transition-all duration-200 text-sm'>
+                    {isSelected ?
+                        <FaCompressAlt /> :
+                        <FaExpandAlt />
+                    }   
+                    
+                </div>
             </div>
         </>
     );
@@ -87,21 +96,21 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
 
 const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
-        p-4 flex flex-col items-start justify-start border-8
+        p-4 flex flex-row items-start justify-between border-8
         dark:bg-gray-900 bg-amber-50
-        hover:shadow-lg hover:rounded-3xl
+        hover:rounded-3xl
         transition-all duration-200
     `;
 
     switch (sectionType) {
         case 'about':
-        return `border-emerald-400 ${commonClasses}`;
+        return `border-emerald-400 group ${commonClasses}`;
         case 'experiences':
         return `border-blue-400 ${commonClasses}`;
         case 'projects':
         return `border-red-400 ${commonClasses}`;
         case 'blog':
-        return `border-amber-400 ${commonClasses}`;
+        return `border-amber-400 group ${commonClasses}`;
     }
 };
 

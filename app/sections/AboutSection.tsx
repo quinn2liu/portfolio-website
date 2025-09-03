@@ -25,57 +25,61 @@ const AboutSection: React.FC<AboutSectionProps> = ({ isSelected }) => {
 
 export default AboutSection;
 
-const AboutImage = (imagePath: string) => {
+const AboutImage: React.FC<{ imagePath: string }> = ({ imagePath }) => {
     return (
-        <div>
-            
-        </div>
+        <img src={imagePath} alt="profile" className="w-24 h-24 rounded-full object-cover" />
     )
 }
 
 const SelectedContent = () => {
-    const { theme, setTheme } = useTheme();
-
     return (
         <div className="flex flex-col items-start justify-center h-full w-full space-y-4 p-12">
-            <div className="text-3xl sm:text-3xl  font-semibold"> <HackerText /> </div>
+            <AboutImage imagePath="/images/me-pro.jpg" />
+
+            <div className="text-xl sm:text-2xl"> <HackerText /> </div>
 
             <div>
-                item 1
+                I'm a developer that enjoys working across the stack to build user-driven applications. Using design and engineering, I look to solve problems with simple and elegant solutions. I am primarily workting with Swift and Python at the moment, but have experience working with a range of other languages and frameworks.
             </div>
 
             <div>
-                item 2
+                I recently graduated from the University of Pennsylvania and am currently located in the Greater Boston area working as a Software Engineer at Symbotic. Feel free to reach out through any of the platforms below! 
             </div>
+
+            <Links />
+
+            <ThemeChangeButton />
         </div>
     )
 }
 
 const MinimizedContent = () => {
-    const { theme, setTheme } = useTheme();
 
     return (
-        <div className="flex flex-col justify-start space-y-3">
+        <div className="flex flex-col items-start justify-start space-y-3">
             <div className="text-2xl sm:text-6xl"> <HackerText /> </div>
 
             <div>&lt; software engineer | boston / &gt;</div>
-    
-            <Links />
-    
-            <div>
-                <button 
-                    onClick={(e) => {
-                        e.stopPropagation(); // Prevent triggering the parent onClick
-                        setTheme(theme == "dark" ? "light" : "dark");
-                    }}
-                >
-                    {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
-                </button>
-            </div>
+        
+            <ThemeChangeButton />
         </div>
     )
 }
 
+const ThemeChangeButton = () => {
+    const { theme, setTheme } = useTheme();
+
+    return (
+        <button 
+            onClick={(e) => {
+                e.stopPropagation(); // Prevent triggering the parent onClick
+                setTheme(theme == "dark" ? "light" : "dark");
+            }}
+        >
+            {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
+        </button>
+    )
+}
 
 
 const HackerText = () => {
