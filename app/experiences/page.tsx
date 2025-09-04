@@ -14,7 +14,7 @@ const WorkSection = () => {
   return (
     <div className="sm:pt-8 w-full">
       <div className="mb-4 text-2xl sm:text-5xl">WORK</div>
-      <ExperienceItem title={"Red Door Design + Staging"} subtitle={"Freelance Application Developer"} date={"July 2024 - Present"} image = {"/red-door.png"} darkColor="dark:bg-rose-950" lightColor="bg-rose-300" 
+      <ExperienceItem subtitle={"Red Door Design + Staging"} title={"Freelance Application Developer"} date={"July 2024 - Present"} image = {"/red-door.png"} color="dark:bg-rose-950" lightColor="bg-rose-300" 
         content = {
           <>
             <ul className="space-y-2">
@@ -26,7 +26,7 @@ const WorkSection = () => {
           </>
         }
       />
-      <ExperienceItem title={"Symbotic"} subtitle={"Software Engineering Intern (Algorithms Analysis)"} date={"May 2024 - August 2024"} image = {"/symbotic.png"} darkColor={"dark:bg-emerald-800"} lightColor={"bg-emerald-300"}
+      <ExperienceItem subtitle={"Symbotic"} title={"Software Engineering Intern (Algorithms Analysis)"} date={"May 2024 - August 2024"} image = {"/symbotic.png"} color={"dark:bg-emerald-800"} lightColor={"bg-emerald-300"}
       content = {
         <>
           <ul className="space-y-2">
@@ -36,7 +36,7 @@ const WorkSection = () => {
               <li>{"•	Improved existing logs processing PowerShell script speed and memory efficiency by 75% and 89%, respectively."}</li>
           </ul>
         </>} />
-      <ExperienceItem title={"Symbotic"} subtitle={"Software Engineering Intern (Test Automation)"} date={"May 2023 - August 2023"} image = {"/symbotic.png"} darkColor={"dark:bg-emerald-800"} lightColor={"bg-emerald-300"}
+      <ExperienceItem subtitle={"Symbotic"} title={"Software Engineering Intern (Test Automation)"} date={"May 2023 - August 2023"} image = {"/symbotic.png"} color={"dark:bg-emerald-800"} lightColor={"bg-emerald-300"}
       content = {
         <>
           <ul className="space-y-2">

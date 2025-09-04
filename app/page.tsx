@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import AboutSection from "./sections/AboutSection";
-import ExperienceSection from "./sections/ExperienceSection";
-import ProjectSection from "./sections/ProjectSection";
-import FunSection from "./sections/FunSection";
+import AboutSection from "./desktop-sections/AboutSection";
+import ExperienceSection from "./desktop-sections/ExperienceSection";
+import ProjectSection from "./desktop-sections/ProjectSection";
+import FunSection from "./desktop-sections/FunSection";
 import { SectionType } from "./types/section";
 import SectionWrapper from "./SectionWrapper";
 import { useTheme } from "next-themes";
@@ -23,18 +23,18 @@ const Home = () => {
     return (
         <div className="h-screen relative">
             <div className="flex flex-row w-full h-full">
-                <div className="flex flex-col flex-2">
+                <div className="flex flex-col">
                     <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection('about')} sectionType="about">
                         <AboutSection />
                     </SectionWrapper>
 
                     {/* FOR EXPERIENCES  */}
-                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection(null)} sectionType="experiences">
+                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection(null)} sectionType="experience">
                         <ExperienceSection />
                     </SectionWrapper>
                 </div>
                
-                <div className="flex flex-col flex-1">
+                <div className="flex flex-col">
                     <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection(null)} sectionType="projects">
                         <ProjectSection />
                     </SectionWrapper>
@@ -47,7 +47,6 @@ const Home = () => {
             </div>
 
             <ThemeChangeButton />
-            
         </div>
     );
 }

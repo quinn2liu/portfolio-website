@@ -65,13 +65,11 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
                     ) 
                 }            
 
-                <div className='opacity-0 dark:group-hover:opacity-90 group-hover:opacity-50 transition-all duration-200 text-sm'>
-                    {isSelected ?
-                        <FaCompressAlt /> :
-                        <FaExpandAlt />
-                    }   
-                    
-                </div>
+                {(sectionType === 'about' || sectionType === 'fun') && (
+                    <div className='opacity-0 dark:group-hover:opacity-90 group-hover:opacity-50 transition-all duration-200 text-sm'>
+                        {isSelected ? <FaCompressAlt /> : <FaExpandAlt />}
+                    </div>
+                )}
             </div>
         </>
     );
@@ -82,8 +80,8 @@ export default SectionWrapper;
 const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): boolean => {
     switch (sectionType) {
         case 'about':
-        return (selectedSection == 'experiences');
-        case 'experiences':
+        return (selectedSection == 'experience');
+        case 'experience':
         return (selectedSection == 'about');
         case 'projects':
         return (selectedSection == 'fun');
@@ -96,7 +94,7 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
 
 const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
-        p-5 flex flex-row items-start justify-between border-8
+        p-4 flex flex-row items-start justify-between border-8
         dark:bg-gray-900 bg-amber-50
         hover:rounded-3xl
         transition-all duration-200
@@ -105,7 +103,7 @@ const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     switch (sectionType) {
         case 'about':
         return `border-emerald-400 group ${commonClasses}`;
-        case 'experiences':
+        case 'experience':
         return `border-blue-400 ${commonClasses}`;
         case 'projects':
         return `border-red-400 ${commonClasses}`;
@@ -118,7 +116,7 @@ const getSelectedClasses = (sectionType: SectionProps['sectionType']): string =>
     switch (sectionType) {
         case 'about':
         return 'shadow-2xl w-[85vw] h-[90vh]';
-        case 'experiences':
+        case 'experience':
         return 'shadow-2xl w-[85vw] h-[90vh]';
         case 'projects':
         return 'shadow-2xl w-[85vw] h-[90vh]';
@@ -131,12 +129,12 @@ const getInactiveClasses = (sectionType: SectionProps['sectionType']): string =>
     switch (sectionType) {
         case 'about':
         return 'w-[35vw] h-[35vh]';
-        case 'experiences':
+        case 'experience':
         return 'w-[35vw] h-[65vh]';
         case 'projects':
-        return 'w-[65vw] h-[65vh]';
+        return 'w-[65vw] h-[75vh]';
         case 'fun':
-        return 'w-[65vw] h-[35vh]';
+        return 'w-[65vw] h-[25vh]';
     }
 };
 
@@ -144,7 +142,7 @@ const getMinimizedClasses = (sectionType: SectionProps['sectionType'], sameColum
     switch (sectionType) {
         case 'about':
         return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
-        case 'experiences':
+        case 'experience':
         return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
         case 'projects':
         return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
