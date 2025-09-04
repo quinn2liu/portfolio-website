@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { ExperienceItem } from "../components/experiences/ExperienceItem";
-import { FaFile } from "react-icons/fa";
+import { FaRegFileAlt } from "react-icons/fa";
 
 interface ExperienceSectionProps {
     isSelected?: boolean;
@@ -20,7 +20,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ isSelected }) => 
                 </div>
                 <div>
                     <a href = "/Quinn Liu Full Time Resume - Fall 2024.pdf" target="_blank" rel="noopener noreferrer">
-                        <FaFile />
+                        <FaRegFileAlt />
                     </a>
                 </div>
             </div>

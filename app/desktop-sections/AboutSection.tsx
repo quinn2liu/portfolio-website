@@ -40,7 +40,7 @@ const SelectedContent = () => {
             </div>
 
             <div>
-                I recently graduated from the University of Pennsylvania and am currently located in the Greater Boston area working as a Software Engineer at Symbotic. Feel free to reach out through any of the platforms below! 
+                I'm a recent graduate from the University of Pennsylvania and am currently located in the Greater Boston area working as a Software Engineer at Symbotic. Feel free to reach out through any of the platforms below! 
             </div>
 
             <Links />
@@ -54,7 +54,7 @@ const MinimizedContent = () => {
         <div className="flex flex-col items-start justify-start space-y-3">
             <div className="text-2xl sm:text-6xl"> <HackerText /> </div>
 
-            <div>&lt; software engineer | boston / &gt;</div>
+            <div className="font-medium">&lt; software engineer | boston / &gt;</div>
         </div>
     )
 }

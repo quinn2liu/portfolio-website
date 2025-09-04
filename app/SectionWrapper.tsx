@@ -65,7 +65,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
                     ) 
                 }            
 
-                {(sectionType === 'about' || sectionType === 'fun') && (
+                {(sectionType != 'experience') && (
                     <div className='opacity-0 dark:group-hover:opacity-90 group-hover:opacity-50 transition-all duration-200 text-sm'>
                         {isSelected ? <FaCompressAlt /> : <FaExpandAlt />}
                     </div>
@@ -96,19 +96,18 @@ const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
         p-4 flex flex-row items-start justify-between border-8
         dark:bg-gray-900 bg-amber-50
-        hover:rounded-3xl
         transition-all duration-200
     `;
 
     switch (sectionType) {
         case 'about':
-        return `border-emerald-400 group ${commonClasses}`;
+        return `border-emerald-400 group hover:rounded-3xl ${commonClasses}`;
         case 'experience':
         return `border-blue-400 ${commonClasses}`;
         case 'projects':
-        return `border-red-400 ${commonClasses}`;
+        return `border-red-400 group hover:rounded-3xl ${commonClasses}`;
         case 'fun':
-        return `border-amber-400 group ${commonClasses}`;
+        return `border-amber-400 group hover:rounded-3xl ${commonClasses}`;
     }
 };
 
@@ -132,9 +131,9 @@ const getInactiveClasses = (sectionType: SectionProps['sectionType']): string =>
         case 'experience':
         return 'w-[35vw] h-[65vh]';
         case 'projects':
-        return 'w-[65vw] h-[75vh]';
+        return 'w-[65vw] h-[90vh]';
         case 'fun':
-        return 'w-[65vw] h-[25vh]';
+        return 'w-[65vw] h-[10vh]';
     }
 };
 

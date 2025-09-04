@@ -10,8 +10,10 @@ const ProjectSection = () => {
   const { theme, setTheme } = useTheme();
   
   return (
-    <div>
-        PROJECTS
+    <div className="flex flex-col">
+        <div className="font-semibold">
+            {"< projects / >"}
+        </div>
     </div>
             
     );

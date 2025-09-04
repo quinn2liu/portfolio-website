@@ -35,7 +35,7 @@ const Home = () => {
                 </div>
                
                 <div className="flex flex-col">
-                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection(null)} sectionType="projects">
+                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection('projects')} sectionType="projects">
                         <ProjectSection />
                     </SectionWrapper>
 
