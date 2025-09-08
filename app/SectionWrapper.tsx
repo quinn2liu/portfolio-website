@@ -53,20 +53,19 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
     return (
         <>
             <div 
-                className={`${baseClasses} ${isSelected ? selectedClasses : isMinimized ? minimizedClasses : inactiveClasses} ${className}`}
+                className={`${baseClasses} ${isSelected ? selectedClasses : isMinimized ? minimizedClasses : inactiveClasses} ${className} relative`}
                 onClick={onToggle}
             >
-                {isMinimized ? 
-                    `< ${sectionType} / >` : 
+                {!isMinimized &&
                     React.Children.map(children, child => 
                         React.isValidElement(child) 
                             ? React.cloneElement(child, { isSelected } as any)
                             : child
-                    ) 
+                    )
                 }            
 
-                {(sectionType != 'experience') && (
-                    <div className='opacity-0 dark:group-hover:opacity-90 group-hover:opacity-50 transition-all duration-200 text-sm'>
+                {(sectionType != 'experience' && sectionType != 'projects') && (
+                    <div className="dark:group-hover:opacity-80 group-hover:opacity-60 opacity-0 absolute top-4 right-4 transition-all duration-200 text-sm z-10">
                         {isSelected ? <FaCompressAlt /> : <FaExpandAlt />}
                     </div>
                 )}
@@ -94,18 +93,18 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
 
 const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
-        p-4 flex flex-row items-start justify-between border-8
+        p-6 flex flex-col items-start justify-between border-8
         dark:bg-gray-900 bg-amber-50
         transition-all duration-200
     `;
 
     switch (sectionType) {
         case 'about':
-        return `border-emerald-400 group hover:rounded-3xl ${commonClasses}`;
+        return `border-red-400 group hover:rounded-3xl  ${commonClasses}`;
         case 'experience':
         return `border-blue-400 ${commonClasses}`;
         case 'projects':
-        return `border-red-400 group hover:rounded-3xl ${commonClasses}`;
+        return `border-emerald-400 ${commonClasses}`;
         case 'fun':
         return `border-amber-400 group hover:rounded-3xl ${commonClasses}`;
     }
@@ -118,9 +117,9 @@ const getSelectedClasses = (sectionType: SectionProps['sectionType']): string =>
         case 'experience':
         return 'shadow-2xl w-[85vw] h-[90vh]';
         case 'projects':
-        return 'shadow-2xl w-[85vw] h-[90vh]';
+        return 'shadow-2xl w-[95vw] h-[90vh]';
         case 'fun':
-        return 'shadow-2xl w-[85vw] h-[90vh]';
+        return 'shadow-2xl w-[95vw] h-[90vh]';
     }
 };
 
@@ -131,21 +130,21 @@ const getInactiveClasses = (sectionType: SectionProps['sectionType']): string =>
         case 'experience':
         return 'w-[35vw] h-[65vh]';
         case 'projects':
-        return 'w-[65vw] h-[90vh]';
+        return 'w-[65vw] h-[85vh]';
         case 'fun':
-        return 'w-[65vw] h-[10vh]';
+        return 'w-[65vw] h-[15vh]';
     }
 };
 
 const getMinimizedClasses = (sectionType: SectionProps['sectionType'], sameColumn: boolean): string => {
     switch (sectionType) {
         case 'about':
-        return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
+        return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[5vw] h-[35vh]';
         case 'experience':
-        return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
+        return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[5vw] h-[65vh]';
         case 'projects':
-        return sameColumn ? 'w-[85vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
+        return sameColumn ? 'w-[95vw] h-[10vh]' : 'w-[15vw] h-[65vh]';
         case 'fun':
-        return sameColumn ?  'w-[85vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
+        return sameColumn ?  'w-[95vw] h-[10vh]' : 'w-[15vw] h-[35vh]';
     }
 };

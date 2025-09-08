@@ -17,7 +17,9 @@ const FunSection: React.FC<FunSectionProps> = ({ isSelected }) => {
         <>
         {isSelected ?
             <SelectedContent /> :
-            <div>FUN !!!!</div>
+            <div className="font-semibold h-full flex items-center">
+                {"< fun / >"}
+            </div>
         }
         </>
         

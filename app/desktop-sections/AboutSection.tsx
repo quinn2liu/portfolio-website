@@ -36,11 +36,11 @@ const SelectedContent = () => {
             <div className="text-xl sm:text-2xl"> <HackerText /> </div>
 
             <div>
-                I'm a developer that enjoys working across the stack to build user-driven applications. Using design and engineering, I look to solve problems with simple and elegant solutions. I am primarily working with Swift and Python at the moment, but have experience with a range of other languages and frameworks as well.
+                Hi! I'm a software developer that enjoys working across the stack to build user-driven applications. Using design and engineering, I look to solve problems with simple and elegant solutions. I am primarily working with Swift and Python at the moment, but have experience with a range of other languages and frameworks as well.
             </div>
 
             <div>
-                I'm a recent graduate from the University of Pennsylvania and am currently located in the Greater Boston area working as a Software Engineer at Symbotic. Feel free to reach out through any of the platforms below! 
+                I recently graduated from the University of Pennsylvania and am currently located in the Greater Boston area working as a Software Engineer at Symbotic. Feel free to reach out through any of the platforms below! 
             </div>
 
             <Links />

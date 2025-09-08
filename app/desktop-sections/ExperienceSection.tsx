@@ -11,7 +11,6 @@ interface ExperienceSectionProps {
 }
 
 const ExperienceSection: React.FC<ExperienceSectionProps> = ({ isSelected }) => {
-  
     return (
         <div className="flex flex-col space-y-3 w-full">
             <div className="flex flex-row justify-between pb-1">

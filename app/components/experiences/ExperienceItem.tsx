@@ -1,9 +1,5 @@
-import { useState } from "react";
-import Footer from "../Footer";
 import { Inter } from "next/font/google";
-import Link from "next/link";
-import BackHome from "../BackHome";
-import Navigation from "../navigation/Navigation";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +28,7 @@ export const ExperienceItem = ({title, subtitle, date, image, darkColor, lightCo
             </div>
             <div className="flex flex-col items-start">
                 <p className="font-medium">{title}</p>
-                <p className="dark:text-amber-50 text-gray-800 text-xs">{subtitle} • {date}</p>
+                <p className={`dark:text-amber-50 text-gray-800 text-xs`}>{subtitle} • {date}</p>
             </div>
         </div>
     )

@@ -35,7 +35,7 @@ const Home = () => {
                 </div>
                
                 <div className="flex flex-col">
-                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection('projects')} sectionType="projects">
+                    <SectionWrapper selectedSection={selectedSection} onToggle={() => toggleSection(null)} sectionType="projects">
                         <ProjectSection />
                     </SectionWrapper>
 
@@ -53,19 +53,25 @@ const Home = () => {
 
 const ThemeChangeButton = () => {
     const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // Prevent hydration mismatch
 
     return (
         <button
             className="absolute bottom-4 right-4 z-50 px-4 py-2 rounded-2xl bg-amber-200 dark:bg-gray-800"
-
             onClick={(e) => {
-                e.stopPropagation(); // Prevent triggering the parent onClick
+                e.stopPropagation();
                 setTheme(theme == "dark" ? "light" : "dark");
             }}
         >
             {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
         </button>
-    )
-}
+    );
+};
 
 export default Home;

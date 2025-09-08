@@ -1,22 +1,37 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
-import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaEnvelope } from "react-icons/fa";
-import { IconContext } from "react-icons";
-import { SectionProps } from "../types/section";
+import React, { useState } from "react";
+import { projectItems } from "../data/ProjectItemData";
+import { ProjectListItem } from "../components/projects/NewProjectItem";
 
 const ProjectSection = () => {
-  const { theme, setTheme } = useTheme();
-  
-  return (
-    <div className="flex flex-col">
-        <div className="font-semibold">
-            {"< projects / >"}
+    const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+
+    const handleClick = (idx: number) => {
+        setSelectedIdx(selectedIdx === idx ? null : idx);
+    };
+
+    return (
+        <div className="h-full w-full flex flex-col space-y-4">
+            <div className="font-semibold">
+                {"< projects / >"}
+            </div>
+            <div className="grid grid-cols-2 gap-5 overflow-y-auto">
+                {projectItems.map((item, idx) => (
+                    <div
+                        key={idx}
+                        onClick={() => handleClick(idx)}
+                        className="cursor-pointer"
+                    >
+                        <ProjectListItem
+                            isMinimized={selectedIdx !== idx}
+                            projectItem={item}
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
-    </div>
-            
     );
-}
+};
 
 export default ProjectSection;
