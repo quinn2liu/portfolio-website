@@ -7,10 +7,6 @@ import { ProjectListItem } from "../components/projects/NewProjectItem";
 const ProjectSection = () => {
     const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
 
-    const handleClick = (idx: number) => {
-        setSelectedIdx(selectedIdx === idx ? null : idx);
-    };
-
     return (
         <div className="h-full w-full flex flex-col space-y-4">
             <div className="font-semibold">
@@ -20,12 +16,13 @@ const ProjectSection = () => {
                 {projectItems.map((item, idx) => (
                     <div
                         key={idx}
-                        onClick={() => handleClick(idx)}
+                        onClick={() => setSelectedIdx(idx)}
                         className="cursor-pointer"
                     >
                         <ProjectListItem
-                            isMinimized={selectedIdx !== idx}
+                            isSelected={selectedIdx !== idx}
                             projectItem={item}
+                            onClose={() => setSelectedIdx(null)}
                         />
                     </div>
                 ))}

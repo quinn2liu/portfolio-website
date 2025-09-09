@@ -19,11 +19,14 @@ export const ExperienceItem = ({title, subtitle, date, image, darkColor, lightCo
             space-x-4
             `}
         >
-            <div className={`flex items-center justify-center rounded-md p-2 ${lightColor} ${darkColor}`}>
+            <div className={`flex items-center justify-center rounded-md p-2 
+                ${lightColor} ${darkColor}
+                
+            `}>
                 <img 
                     src={image} 
                     alt="" 
-                    className={`object-contain w-8 h-8`}
+                    className={`object-contain w-7 h-7`}
                 />
             </div>
             <div className="flex flex-col items-start">

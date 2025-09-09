@@ -69,7 +69,7 @@ const ThemeChangeButton = () => {
                 setTheme(theme == "dark" ? "light" : "dark");
             }}
         >
-            {theme == "light" ? "Light Mode 🕺" : "Dark Mode 💃"}
+            {theme == "light" ? "🕺" : "💃"}
         </button>
     );
 };

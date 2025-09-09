@@ -19,7 +19,7 @@ export const projectItems: ProjectItem[] = [
         link: ""
     },
     {
-        name: "Cocktail Machine",
+        name: "Automated Cocktail Maker",
         date: "Spring 2024",
         subtitle: "ATMega32PB microcontroller-based machine.",
         description: "Engineered and programmed automated cocktail machine to take the hassle out of creating cocktails. Users can select pre-determined drinks using integrated joystick and button. Fluids dispension performed via brushless DC pumps. Includes built-in drink mixer that can mix at variable speeds due to PWM control over DC motor. Ensured proper power management with through with MOSFETs, diodes, and resistors. User interface programmed using self-implemented LCD graphics library and displayed on LCD screen. Project was programmed and wired using ATmega328PB microcontroller. Developed as ESE 3500 final project.",
