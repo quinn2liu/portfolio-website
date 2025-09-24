@@ -93,20 +93,30 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
 
 const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
-        p-6 flex flex-col items-start justify-between border-8
-        dark:bg-gray-900 bg-amber-50
+        p-6 flex flex-col items-start justify-between 
         transition-all duration-200
+        rounded-3xl
     `;
 
     switch (sectionType) {
         case 'about':
-        return `border-red-400 group hover:rounded-3xl  ${commonClasses}`;
+        return `${commonClasses}
+        bg-red-400
+        dark:bg-red-500 dark:bg-opacity-90   
+        group hover:rounded-none `;
         case 'experience':
-        return `border-blue-400 ${commonClasses}`;
+        return `${commonClasses}
+        bg-blue-400
+        dark:bg-blue-500 dark:bg-opacity-90`;
         case 'projects':
-        return `border-emerald-400 ${commonClasses}`;
+        return `${commonClasses}
+        bg-emerald-400
+        dark:bg-emerald-500 dark:bg-opacity-90`;
         case 'fun':
-        return `border-amber-400 group hover:rounded-3xl ${commonClasses}`;
+        return `${commonClasses}
+        bg-fuchsia-400 
+        dark:bg-fuchsia-500 darkbg-opacity-90
+        group hover:rounded-none `;
     }
 };
 

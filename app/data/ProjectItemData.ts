@@ -10,27 +10,45 @@ export type ProjectItem = {
 
 export const projectItems: ProjectItem[] = [
     {
-        name: "Cloud Search Engine",
+        name: "Bitewise",
+        date: "Spring 2025",
+        subtitle: "News aggregation and summarization platform.",
+        description: "Developed a daily news aggregation and summarization platform using Python, Flask, and a custom-built news API. Custom-built webcrawler scrapes daily news articles from hundreds of news sources, summarizes them, and provides a daily digest of the most important news. Application features user-specified search preferences, media-bias ratings, AI-generated podcasts, and article summaries.",
+        technologies: ["React.js", "MongoDB", "BERTopic", "OpenAI", "Python", "Flask"],
+        image: "",
+        link: ""
+    },
+    {
+        name: "Game Day Impact",
+        date: "Spring 2025",
+        subtitle: "Data analysis comparing crime rates and sports events.",
+        description: "An interactive web application and data analysis tool that explores the relationship between major sports events and crime rates in New York City and Philadelphia over the past 15 years. Built with a PostgreSQL database, React.js frontend, and Python/Express for data processing, the tool integrates crime and sports data to reveal correlations using interactive dashboards, maps, and visualizations. Users can explore how game outcomes, playoff status, and team performance influence city-wide and localized crime trends. Designed to support data-driven decision-making for urban planners, public safety officials, and researchers.",
+        technologies: ["React.js", "PostgreSQL", "Express", "Python"],
+        image: "",
+        link: ""
+    },
+    {
+        name: "Megacrawler",
         date: "Winter 2024",
-        subtitle: "Distributed web crawler and search engine.",
+        subtitle: "Distributed cloud web crawler and search engine.",
         description: "Implemented a from-scratch search engine using Java, deployed onto the cloud using AWS EC2 instances. The search engine, specifically the crawler and indexer, is built using a custom implementations of a distributed key-value store and Apache Spark-like analytics engine, as well as a custom-built webserver, resulting in a total of 50,000+ processed webpages. Search queries were optimized using parallelized lookups, index optimizations, and bigram term support to support the Term Frequency/Inverse Document Frequency and Pagerank metrics used in the project's ranking mechanisms. The frontend used HTML, CSS, and Bootstrap for page design and Javascript + AJAX for scripting.",
         technologies: ["Java", "AWS"],
         image: "/images/megacrawl.png",
         link: ""
     },
     {
-        name: "Automated Cocktail Maker",
+        name: "PRIME Hydration",
         date: "Spring 2024",
-        subtitle: "ATMega32PB microcontroller-based machine.",
+        subtitle: "Microcontroller-based automated cocktail machine.",
         description: "Engineered and programmed automated cocktail machine to take the hassle out of creating cocktails. Users can select pre-determined drinks using integrated joystick and button. Fluids dispension performed via brushless DC pumps. Includes built-in drink mixer that can mix at variable speeds due to PWM control over DC motor. Ensured proper power management with through with MOSFETs, diodes, and resistors. User interface programmed using self-implemented LCD graphics library and displayed on LCD screen. Project was programmed and wired using ATmega328PB microcontroller. Developed as ESE 3500 final project.",
         technologies: ["C", "ATmega328PB"],
         image: "/images/cocktail.jpeg",
         link: "https://ese3500.github.io/final-project-prime-hydration/"
     },
     {
-        name: "UFO Sightings Data Analysis",
+        name: "UFO Sightings Predictor",
         date: "Winter 2023",
-        subtitle: "Machine learning modeling on UFO sightings.",
+        subtitle: "Machine learning modeling on UFO sightings dataset.",
         description: "In this project, we wanted to perform a deep dive on the https://www.kaggle.com/datasets/jonwright13/ufo-sightings-around-the-world-better dataset, which details UFO over '80,000+ documented close encounters from the past 70 years'. This data included information regarding sighting location, time, duration, shape, coordinates, and a description. Outside of performing standard exploratory data anaylsis and visualization, we created a classification models to classify UFO shape and regression models to predict the number of sightings for a given date. After leveraging data science and machine learning techniques, we were able to learn about factors and trends that underline UFO sightings.",
         technologies: ["Python", "Pandas", "Scikit-Learn"],
         image: "/images/ufo.png",

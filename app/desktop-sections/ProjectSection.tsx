@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { projectItems } from "../data/ProjectItemData";
 import { ProjectListItem } from "../components/projects/NewProjectItem";
 
@@ -9,22 +9,16 @@ const ProjectSection = () => {
 
     return (
         <div className="h-full w-full flex flex-col space-y-4">
-            <div className="font-semibold">
-                {"< projects / >"}
-            </div>
-            <div className="grid grid-cols-2 gap-5 overflow-y-auto">
+            <div className="font-semibold">{"< projects / >"}</div>
+            <div className="grid grid-cols-2 gap-5 overflow-y-auto scrollbar-hide">
                 {projectItems.map((item, idx) => (
-                    <div
+                    <ProjectListItem
                         key={idx}
+                        isSelected={selectedIdx === idx}
+                        projectItem={item}
+                        onClose={() => setSelectedIdx(null)}
                         onClick={() => setSelectedIdx(idx)}
-                        className="cursor-pointer"
-                    >
-                        <ProjectListItem
-                            isSelected={selectedIdx !== idx}
-                            projectItem={item}
-                            onClose={() => setSelectedIdx(null)}
-                        />
-                    </div>
+                    />
                 ))}
             </div>
         </div>

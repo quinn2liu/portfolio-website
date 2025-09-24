@@ -14,9 +14,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ isSelected }) => 
     return (
         <div className="flex flex-col space-y-3 w-full">
             <div className="flex flex-row justify-between">
-                <div className="font-semibold">
-                    {"< experience / >"}
-                </div>
+                <div className="font-semibold">{"< experience / >"}</div>
                 <div>
                     <a href = "/Quinn Liu Full Time Resume - Fall 2024.pdf" target="_blank" rel="noopener noreferrer">
                         <FaRegFileAlt />
