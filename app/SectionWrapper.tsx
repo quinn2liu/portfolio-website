@@ -93,7 +93,7 @@ const getSameColumn = (selectedSection: SectionType, sectionType: SectionType): 
 
 const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
     const commonClasses = `
-        p-6 flex flex-col items-start justify-between 
+        p-8 flex flex-col items-start justify-between 
         transition-all duration-200
         rounded-3xl
     `;
@@ -103,7 +103,7 @@ const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
         return `${commonClasses}
         bg-red-400
         dark:bg-red-500 dark:bg-opacity-90   
-        group hover:rounded-none `;
+        group hover:rounded-lg `;
         case 'experience':
         return `${commonClasses}
         bg-blue-400
@@ -114,9 +114,9 @@ const getBaseClasses = (sectionType: SectionProps['sectionType']): string => {
         dark:bg-emerald-500 dark:bg-opacity-90`;
         case 'fun':
         return `${commonClasses}
-        bg-fuchsia-400 
-        dark:bg-fuchsia-500 darkbg-opacity-90
-        group hover:rounded-none `;
+        bg-fuchsia-700 bg-opacity-70
+        dark:bg-opacity-80
+        group hover:rounded-lg`;
     }
 };
 

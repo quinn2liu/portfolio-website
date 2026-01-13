@@ -38,21 +38,34 @@ const SelectedContent = () => {
 
 const InterestList = () => {
     return (
-        <ul className="space-y-8">
-            <li>⚽ <strong>Soccer.</strong> #COYS.</li>
+        <div>
+            <ul className="space-y-6">
+                <li>⚽ <strong>Soccer.</strong> #COYS.</li>
 
-            <li>
-                🏃‍♂️ <strong>Running.</strong> <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"> <strong> <u>You can find some mid runs here on my Strava.</u></strong></a>
-            </li>
-            
-            <li> 
-                <p className="mb-6"><strong>🎧 Music.</strong> When I have time, I'm a for-fun DJ. Here's my all time favorites playlist:</p>
+                <li>
+                    🏃‍♂️ <strong>Running.</strong> <a href="https://www.strava.com/athletes/100371884" target="_blank" rel="noopener noreferrer"> <strong> <u>You can find some mid runs here on my Strava.</u></strong></a>
+                </li>
+                
+                <li> 
+                    <p className="mb-6"><strong>🎧 Music.</strong> When I have time, I'm a for-fun DJ. Here's my all time favorites playlist:</p>
 
-                <SpotifyPlaylist />
-            </li>
+                    <SpotifyPlaylist />
+                </li>
 
-            <li>🛹 <strong>Skateboarding.</strong> All I can do so far is ollie :)</li>
-        </ul>
+                <li>🛹 <strong>Skateboarding.</strong> All I can do so far is ollie :)</li>
+            </ul>
+
+            <div className="flex flex-row space-x-6">
+                <img src="/images/skyzone.jpeg" alt="" className="
+                    h-[20vh] object-contain
+                    sm:block transition ease-in-out hover:-translate-y-1 hover:scale-105
+                "/>
+                <img src="/images/homiess.JPG" alt="" className="
+                h-[20vh] object-contain
+                hidden sm:block transition ease-in-out hover:-translate-y-1 hover:scale-105
+                "/>
+            </div>
+        </div>
     )
 }
 

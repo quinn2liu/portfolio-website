@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-
+import { ExperienceType } from "../../data/ExperienceItemData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -8,11 +8,12 @@ type ExperienceItemProps = {
     subtitle: string;
     date: string;
     image: string;
-    darkColor: string;
-    lightColor: string;
-  };
+    darkStyling: string;
+    lightStyling: string;
+    experienceType: ExperienceType;
+};
 
-export const ExperienceItem = ({title, subtitle, date, image, darkColor, lightColor}: ExperienceItemProps) => {
+export const ExperienceItem = ({title, subtitle, date, image, darkStyling, lightStyling, experienceType}: ExperienceItemProps) => {
     return (
         <div className={`
             flex flex-row justify-start items-center 
@@ -20,7 +21,7 @@ export const ExperienceItem = ({title, subtitle, date, image, darkColor, lightCo
             `}
         >
             <div className={`flex items-center justify-center rounded-md p-2 
-                ${lightColor} ${darkColor}
+                ${lightStyling} ${darkStyling}
                 
             `}>
                 <img 
