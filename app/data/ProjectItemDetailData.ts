@@ -1,4 +1,4 @@
-export type ProjectItem = {
+export type ProjectItemDetails = {
     name: string;
     date: string;
     subtitle: string;
@@ -8,7 +8,7 @@ export type ProjectItem = {
     link?: string;
 }
 
-export const projectItems: ProjectItem[] = [
+export const projectItemDetails: ProjectItemDetails[] = [
     {
         name: "Bitewise",
         date: "Spring 2025",
