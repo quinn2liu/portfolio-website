@@ -22,13 +22,13 @@ const MinimizedProjectItem = ({ name, date, subtitle, technologies, image, onCli
         className='group flex flex-row items-start justify-between cursor-pointer
       dark:hover:bg-gray-900 hover:bg-amber-200
         p-4 space-y-2
-        rounded-3xl border-4 hover:rounded-2xl dark:border-gray-900 border-amber-100 hover:border-amber-200
+        rounded-3xl border-4 hover:rounded-2xl dark:border-gray-900 hover:dark:border-gray-900 border-amber-100 hover:border-amber-200
         transition-all duration-300'
         onClick={onClick}
     >
         <div className='flex flex-col items-start'>
-            <div className='sm:text-2xl text-lg font-semibold group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300'>{name}</div>
-            <div className='text-xs group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300'>{subtitle}</div>
+            <div className='sm:text-2xl text-lg font-semibold group-hover:text-emerald-600 dark:group-hover:text-emerald-400'>{name}</div>
+            <div className='text-xs group-hover:text-gray-600 dark:group-hover:text-gray-300 '>{subtitle}</div>
         </div>
         
         <img src={image} alt="" className='h-20 rounded-md'/>    

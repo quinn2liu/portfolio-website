@@ -15,8 +15,8 @@ export const projectItemDetails: ProjectItemDetails[] = [
         subtitle: "News aggregation and summarization platform.",
         description: "Developed a daily news aggregation and summarization platform using Python, Flask, and a custom-built news API. Custom-built webcrawler scrapes daily news articles from hundreds of news sources, summarizes them, and provides a daily digest of the most important news. Application features user-specified search preferences, media-bias ratings, AI-generated podcasts, and article summaries.",
         technologies: ["React.js", "MongoDB", "BERTopic", "OpenAI", "Python", "Flask"],
-        image: "",
-        link: ""
+        image: "/images/bitewise.png",
+        link: "https://github.com/fayefzhang/bitewise"
     },
     {
         name: "Game Day Impact",

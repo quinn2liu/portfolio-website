@@ -15,13 +15,13 @@ export const SelectedProjectItem = ({ name, date, description, technologies, ima
     const handleClose = (e: React.MouseEvent) => {
         e.stopPropagation();
         setShow(false);
-        setTimeout(() => onClose?.(), 50);
+        setTimeout(() => onClose?.(), 200);
     };
 
     return (
         <div 
             className={`fixed inset-0 z-50 flex items-center justify-center 
-                bg-black bg-opacity-85 transition-opacity duration-200 ${show ? 'opacity-100' : 'opacity-0'}
+                bg-black dark:bg-opacity-75 bg-opacity-60 transition-opacity duration-200 ${show ? 'opacity-100' : 'opacity-0'}
                 cursor-pointer`}
             onClick={handleClose}
         >
@@ -29,9 +29,9 @@ export const SelectedProjectItem = ({ name, date, description, technologies, ima
                 className={`flex flex-col items-start gap-4
                     dark:bg-slate-950 bg-amber-100
                     dark:text-amber-100 text-gray-900
-                    border-4 dark:border-emerald-400 dark:border-opacity-80
+                    border-4 border-emerald-400 dark:border-opacity-80
                     rounded-2xl p-8 w-[85vw] h-[85vh] relative
-                    transform transition-colors ${show ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} cursor-default`}
+                    transform transition-all duration-200 ${show ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} cursor-default`}
                 onClick={e => e.stopPropagation()}
             >
                 <button className="absolute top-4 right-4 text-3xl" onClick={handleClose}>&times;</button>
@@ -46,10 +46,16 @@ export const SelectedProjectItem = ({ name, date, description, technologies, ima
 
                 </div>
 
-                <div className={`${inter.className} sm:text-sm text-xs`}>{description}</div>
+                <div className='flex flex-col items-start gap-1'>
+                    <div className='font-semibold dark:text-gray-300 text-gray-700'>Technologies:</div>
+                    <div className='flex flex-row space-x-4 items-start gap-2'>
+                        {technologies.map((tech, idx) => <TechnologyItem key={idx} tech={tech} />)}
+                    </div>
+                </div>
 
-                <div className='flex flex-row space-x-4 items-start'>
-                    {technologies.map((tech, idx) => <TechnologyItem key={idx} tech={tech} />)}
+                <div className='flex flex-col items-start gap-1'>
+                    <div className='font-semibold dark:text-gray-300 text-gray-700'>Description:</div>
+                    <div className={`${inter.className} sm:text-sm text-xs`}>{description}</div>
                 </div>
 
                 {link && <a className='underline' href={link} target="_blank" rel="noopener noreferrer">Learn More</a>}
