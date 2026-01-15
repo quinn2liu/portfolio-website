@@ -71,7 +71,7 @@ export const BitewiseDetails = () => {
                         key={index} 
                         src={image.image} 
                         alt={image.description} 
-                        className='h-48 w-auto rounded-lg cursor-pointer hover:opacity-80 transition-opacity'
+                        className='h-[35vh] w-auto rounded-lg cursor-pointer hover:opacity-80 transition-opacity'
                         onClick={() => handleImageClick(index)}
                     />
                 ))}
@@ -87,9 +87,8 @@ export const BitewiseDetails = () => {
                     <div
                         className={`flex flex-col items-center gap-4 relative
                             transform transition-all duration-200 ${showImageModal ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} cursor-default`}
-                        onClick={e => e.stopPropagation()}
                     >
-                        <div className='text-white bg-emerald-600 dark:bg-emerald-400 py-2 px-3 rounded-lg text-lg font-semibold'>{images[selectedImage].description}</div>
+                        <div className='text-white dark:bg-emerald-600 bg-emerald-400 py-2 px-3 rounded-lg text-lg font-semibold'>{images[selectedImage].description}</div>
                         <img 
                             src={images[selectedImage].image} 
                             alt={images[selectedImage].description}

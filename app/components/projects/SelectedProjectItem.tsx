@@ -55,7 +55,7 @@ export const SelectedProjectItem = ({ name, date, description, technologies, ima
 
                 <div className='flex flex-col items-start gap-1'>
                     <div className='font-semibold dark:text-gray-300 text-gray-700'>Technologies:</div>
-                    <div className='flex flex-row space-x-4 items-start gap-2'>
+                    <div className='flex flex-row items-start gap-3'>
                         {technologies.map((tech, idx) => <TechnologyItem key={idx} tech={tech} />)}
                     </div>
                 </div>
