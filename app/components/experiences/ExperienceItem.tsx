@@ -1,7 +1,4 @@
-import { Inter } from "next/font/google";
 import { ExperienceType } from "../../data/ExperienceItemData";
-
-const inter = Inter({ subsets: ["latin"] });
 
 type ExperienceItemProps = {
     title: string;

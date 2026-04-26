@@ -1,4 +1,5 @@
 export type ProjectItemDetails = {
+    slug: string;
     name: string;
     date: string;
     subtitle: string;
@@ -10,6 +11,7 @@ export type ProjectItemDetails = {
 
 export const projectItemDetails: ProjectItemDetails[] = [
     {
+        slug: "bitewise",
         name: "Bitewise",
         date: "Spring 2025",
         subtitle: "News aggregation and summarization platform.",
@@ -19,6 +21,7 @@ export const projectItemDetails: ProjectItemDetails[] = [
         link: "https://github.com/fayefzhang/bitewise"
     },
     {
+        slug: "game-day-impact",
         name: "Game Day Impact",
         date: "Spring 2025",
         subtitle: "Data analysis comparing crime rates and sports events.",
@@ -28,6 +31,7 @@ export const projectItemDetails: ProjectItemDetails[] = [
         link: ""
     },
     {
+        slug: "megacrawler",
         name: "Megacrawler",
         date: "Winter 2024",
         subtitle: "Distributed cloud web crawler and search engine.",
@@ -37,6 +41,7 @@ export const projectItemDetails: ProjectItemDetails[] = [
         link: ""
     },
     {
+        slug: "prime-hydration",
         name: "PRIME Hydration",
         date: "Spring 2024",
         subtitle: "Microcontroller-based automated cocktail machine.",
@@ -46,6 +51,7 @@ export const projectItemDetails: ProjectItemDetails[] = [
         link: "https://ese3500.github.io/final-project-prime-hydration/"
     },
     {
+        slug: "ufo-sightings-predictor",
         name: "UFO Sightings Predictor",
         date: "Winter 2023",
         subtitle: "Machine learning modeling on UFO sightings dataset.",
@@ -55,6 +61,7 @@ export const projectItemDetails: ProjectItemDetails[] = [
         link: "https://github.com/quinn2liu/UFOSightingsAnalysis"
     },
     {
+        slug: "pennos",
         name: "PennOS",
         date: "Winter 2023",
         subtitle: "UNIX-like operating system implemented in C.",

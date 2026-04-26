@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    /* Body text: Inter */
+    body {
+        font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    }
+
+    /* Headings: Fira Code */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-fira-code), ui-monospace, monospace;
+    }
+}
+
 @layer utilities {
     .scrollbar-hide {
       -ms-overflow-style: none;  /* IE and Edge */
